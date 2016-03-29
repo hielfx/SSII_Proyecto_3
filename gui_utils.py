@@ -66,7 +66,7 @@ def generate_server_interface():
     start_btn.pack(side=tk.LEFT, padx=1, pady=1)
 
     def stop_server_callback():
-        server.stop_server()
+        globals()['server'].stop_server()
 
         root.title("Server socket - Stopped")
         status['text'] = "stopped"
@@ -79,9 +79,9 @@ def generate_server_interface():
     stop_btn.pack(side=tk.LEFT, padx=1, pady=1)
 
     def on_closing():
-        if server is not None:  # We check if the server was started
-            server.stop_server()
-            server.close_server()  # We clean the socket
+        if globals()['server'] is not None:  # We check if the server was started
+            globals()['server'].stop_server()
+            globals()['server'].close_server()  # We clean the socket
         root.quit()  # We close the window
 
     root.protocol("WM_DELETE_WINDOW", on_closing)  # Handle the windows close
@@ -118,7 +118,7 @@ def generate_client_interface():
         try:
             host = host = '127.0.0.1'
             port = 7070
-            client.connect(host, port)
+            globals()['client'].connect(host, port)
 
             root.title("Client socket - Connected")
             status['text'] = "connected"

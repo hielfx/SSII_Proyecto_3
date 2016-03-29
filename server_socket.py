@@ -110,7 +110,7 @@ class SSLServerSocket():
     def stop_server(self):
         logger.get_logger().info("Stopping the server...")
         try:
-            self.socket.shutdown(sck.SHUT_RDWR)  # To close the server
+            self.socket.shutdown()  # To close the server
             # self.socket.server_close()
             logger.get_logger().info("Server stopped successfully.\n")
 

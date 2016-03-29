@@ -26,6 +26,7 @@ class SSLClientSocket:
     def connect(self, host='127.0.0.1', port=7070):
         # try:
         self.socket.connect((host, port))
+        # TODO: Catch the certificate error exception when the certificate is invalid
         # except Exception:
         #     g_utl.generate_msgbox("Error", "You can not establish a connection because the target machine expressly "
         #                                 "rejected that connection. Check if the server socket is running.\n"
