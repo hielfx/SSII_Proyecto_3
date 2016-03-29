@@ -49,7 +49,7 @@ def generate_server_interface():
     button_frame.pack()
 
     def start_server_callback():
-        globals()['server'] = SSLServerSocket()
+        globals()['server'] = SSLServerSocket('127.0.0.1', 7070,"sslserver.crt.pem", "sslserver.key.pem")
 
         # We call the server asynchronously to not freeze the application. We create a thread
         thr = threading.Thread(target=globals()['server'].run_server, args=(), kwargs={})
@@ -116,7 +116,7 @@ def generate_client_interface():
         globals()['client'] = SSLClientSocket()
 
         try:
-            host = host = socket.gethostbyname(socket.gethostname())
+            host = host = '127.0.0.1'
             port = 7070
             client.connect(host, port)
 
