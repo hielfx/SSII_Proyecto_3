@@ -20,6 +20,8 @@ class MySSL_TCPServer(TCPServer):
         connstream = ssl.wrap_socket(newsocket,
                                  server_side=True,
                                  certfile = self.certfile,
+                                 ca_certs="sslclient.crt.pem",
+                                 cert_reqs=ssl.CERT_REQUIRED,
                                  keyfile = self.keyfile,
                                  ssl_version = self.ssl_version)
         return connstream, fromaddr
@@ -34,4 +36,4 @@ class testHandler(StreamRequestHandler):
         print(_data)
         self.request.sendall(bytes(str.encode(_data.upper())))
 #test code
-MySSL_ThreadingTCPServer(('127.0.0.1', 7070), testHandler, "SSLCertificate.crt.pem","SSLCertificate.key.pem").serve_forever()
+MySSL_ThreadingTCPServer(('127.0.0.1', 7070), testHandler, "sslserver.crt.pem","sslserver.key.pem").serve_forever()
