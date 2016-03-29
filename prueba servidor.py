@@ -2,13 +2,14 @@ __author__ = 'Daniel Sánchez'
 from socketserver import TCPServer, ThreadingMixIn, StreamRequestHandler
 import ssl
 
-class MySSL_TCPServer(TCPServer):
+
+class SSLTCPServer(TCPServer):
     def __init__(self,
-                 server_address,
+                 server_address,  # Server address (host,port)
                  RequestHandlerClass,
-                 certfile,
-                 keyfile,
-                 ssl_version=ssl.PROTOCOL_TLSv1,
+                 certfile,  # Certificate path
+                 keyfile,  # Key path
+                 ssl_version=ssl.PROTOCOL_TLSv1,  #Comunication protocol
                  bind_and_activate=True):
         TCPServer.__init__(self, server_address, RequestHandlerClass, bind_and_activate)
         self.certfile = certfile
@@ -20,15 +21,18 @@ class MySSL_TCPServer(TCPServer):
         connstream = ssl.wrap_socket(newsocket,
                                  server_side=True,
                                  certfile = self.certfile,
-                                 ca_certs="sslclient.crt.pem",
+                                 ca_certs="sslserver.cer",  # We trust in all the certificates signed by this ca (or this ca itself)
                                  cert_reqs=ssl.CERT_REQUIRED,
                                  keyfile = self.keyfile,
                                  ssl_version = self.ssl_version)
         return connstream, fromaddr
 
-class MySSL_ThreadingTCPServer(ThreadingMixIn, MySSL_TCPServer): pass
 
-class testHandler(StreamRequestHandler):
+class SSLTCPServer(ThreadingMixIn, SSLTCPServer):
+    pass
+
+
+class MyTCPHandler(StreamRequestHandler):
     def handle(self):
         data = self.connection.recv(4096)
         # self.wfile.write(data)
@@ -36,4 +40,4 @@ class testHandler(StreamRequestHandler):
         print(_data)
         self.request.sendall(bytes(str.encode(_data.upper())))
 #test code
-MySSL_ThreadingTCPServer(('127.0.0.1', 7070), testHandler, "sslserver.crt.pem","sslserver.key.pem").serve_forever()
+SSLTCPServer(('127.0.0.1', 7070), MyTCPHandler, "sslserver.crt.pem","sslserver.key.pem").serve_forever()

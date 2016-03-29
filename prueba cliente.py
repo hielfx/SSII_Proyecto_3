@@ -4,7 +4,7 @@ import socket, ssl
 
 s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 ssl_sock = ssl.wrap_socket(s,
-                           ca_certs="sslserver.crt.pem",
+                           ca_certs="sslserver.cer",
                            certfile="sslclient.crt.pem",
                            keyfile="sslclient.key.pem",
                            cert_reqs=ssl.CERT_REQUIRED,
