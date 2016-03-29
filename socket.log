@@ -1,0 +1,755 @@
+2016-03-29 11:00:29,164 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 11:00:29,202 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 11:00:30,062 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-29 11:00:30,062 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 74, in __init__
+    server_side=True)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 1064, in wrap_socket
+    ciphers=ciphers)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 686, in __init__
+    self._context.load_cert_chain(certfile, keyfile)
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+
+2016-03-29 11:00:30,064 - socket_app_py - INFO - Starting server...
+2016-03-29 11:00:30,064 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 11:00:30,064 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 11:00:30,065 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 87, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:01:00,081 - socket_app_py - INFO - Stopping the server...
+2016-03-29 11:01:00,081 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 11:01:00,082 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 103, in stop_server
+    self.socket.shutdown()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:01:02,148 - socket_app_py - INFO - Stopping the server...
+2016-03-29 11:01:02,148 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 11:01:02,149 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 103, in stop_server
+    self.socket.shutdown()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:01:02,149 - socket_app_py - INFO - Closing the server...
+2016-03-29 11:01:02,149 - socket_app_py - INFO - Error while trying to close the server.
+
+
+2016-03-29 11:01:02,149 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 113, in close_server
+    self.socket.server_close()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:01:05,646 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 11:01:05,647 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 11:01:06,417 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-29 11:01:06,418 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 74, in __init__
+    server_side=True)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 1064, in wrap_socket
+    ciphers=ciphers)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 686, in __init__
+    self._context.load_cert_chain(certfile, keyfile)
+ssl.SSLError: [SSL] PEM lib (_ssl.c:2824)
+
+
+
+2016-03-29 11:01:06,419 - socket_app_py - INFO - Starting server...
+2016-03-29 11:01:06,419 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 11:01:06,419 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 11:01:06,419 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 87, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:01:51,671 - socket_app_py - INFO - Stopping the server...
+2016-03-29 11:01:51,671 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 11:01:51,671 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 103, in stop_server
+    self.socket.shutdown()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:01:55,104 - socket_app_py - INFO - Stopping the server...
+2016-03-29 11:01:55,104 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 11:01:55,104 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 103, in stop_server
+    self.socket.shutdown()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:01:55,105 - socket_app_py - INFO - Closing the server...
+2016-03-29 11:01:55,105 - socket_app_py - INFO - Error while trying to close the server.
+
+
+2016-03-29 11:01:55,105 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 113, in close_server
+    self.socket.server_close()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:11:22,541 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 11:11:22,542 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 11:11:23,290 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-29 11:11:23,290 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 75, in __init__
+    server_side=True)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 1064, in wrap_socket
+    ciphers=ciphers)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 686, in __init__
+    self._context.load_cert_chain(certfile, keyfile)
+ssl.SSLError: [SSL] PEM lib (_ssl.c:2824)
+
+
+
+2016-03-29 11:11:23,291 - socket_app_py - INFO - Starting server...
+2016-03-29 11:11:23,291 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 11:11:23,291 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 11:11:23,291 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 88, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:15:34,402 - socket_app_py - INFO - Stopping the server...
+2016-03-29 11:15:34,402 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 11:15:34,402 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 104, in stop_server
+    self.socket.shutdown()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:15:34,402 - socket_app_py - INFO - Closing the server...
+2016-03-29 11:15:34,402 - socket_app_py - INFO - Error while trying to close the server.
+
+
+2016-03-29 11:15:34,403 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 114, in close_server
+    self.socket.server_close()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:36:47,017 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 11:36:47,018 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 11:36:47,834 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-29 11:36:47,834 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 75, in __init__
+    server_side=True)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 1064, in wrap_socket
+    ciphers=ciphers)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 686, in __init__
+    self._context.load_cert_chain(certfile, keyfile)
+ssl.SSLError: [SSL] PEM lib (_ssl.c:2824)
+
+
+
+2016-03-29 11:36:47,835 - socket_app_py - INFO - Starting server...
+2016-03-29 11:36:47,835 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 11:36:47,835 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 11:36:47,836 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 88, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:36:56,690 - socket_app_py - INFO - Stopping the server...
+2016-03-29 11:36:56,690 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 11:36:56,690 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 104, in stop_server
+    self.socket.shutdown()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:37:56,473 - socket_app_py - INFO - Stopping the server...
+2016-03-29 11:37:56,473 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 11:37:56,473 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 104, in stop_server
+    self.socket.shutdown()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:37:56,473 - socket_app_py - INFO - Closing the server...
+2016-03-29 11:37:56,473 - socket_app_py - INFO - Error while trying to close the server.
+
+
+2016-03-29 11:37:56,474 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 114, in close_server
+    self.socket.server_close()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:44:21,966 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 11:44:21,967 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 11:44:21,969 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-29 11:44:21,969 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 75, in __init__
+    server_side=True)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 1064, in wrap_socket
+    ciphers=ciphers)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 675, in __init__
+    raise ValueError("certfile must be specified for server-side "
+ValueError: certfile must be specified for server-side operations
+
+
+
+2016-03-29 11:44:21,970 - socket_app_py - INFO - Starting server...
+2016-03-29 11:44:21,970 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 11:44:21,970 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 11:44:21,971 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 88, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:44:32,609 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 11:44:32,610 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 11:44:33,354 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-29 11:44:33,354 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 75, in __init__
+    server_side=True)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 1064, in wrap_socket
+    ciphers=ciphers)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 686, in __init__
+    self._context.load_cert_chain(certfile, keyfile)
+ssl.SSLError: [SSL] PEM lib (_ssl.c:2824)
+
+
+
+2016-03-29 11:44:33,355 - socket_app_py - INFO - Starting server...
+2016-03-29 11:44:33,355 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 11:44:33,355 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 11:44:33,356 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 88, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:47:46,247 - socket_app_py - INFO - Stopping the server...
+2016-03-29 11:47:46,247 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 11:47:46,248 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 104, in stop_server
+    self.socket.shutdown()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:47:46,248 - socket_app_py - INFO - Closing the server...
+2016-03-29 11:47:46,248 - socket_app_py - INFO - Error while trying to close the server.
+
+
+2016-03-29 11:47:46,248 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 114, in close_server
+    self.socket.server_close()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:47:47,135 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 11:47:47,136 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 11:48:43,460 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-29 11:48:43,462 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:/Users/Dani/PycharmProjects/SSII_Proyecto_3\server_socket.py", line 75, in __init__
+    server_side=True)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 1064, in wrap_socket
+    ciphers=ciphers)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 686, in __init__
+    self._context.load_cert_chain(certfile, keyfile)
+ssl.SSLError: [SSL] PEM lib (_ssl.c:2824)
+
+
+
+2016-03-29 11:48:53,162 - socket_app_py - INFO - Starting server...
+2016-03-29 11:48:53,165 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 11:48:53,166 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 11:48:53,169 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:/Users/Dani/PycharmProjects/SSII_Proyecto_3\server_socket.py", line 88, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 11:52:44,944 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 11:52:44,946 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 11:53:45,514 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 11:53:45,515 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 11:55:07,249 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-29 11:55:07,251 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:/Users/Dani/PycharmProjects/SSII_Proyecto_3\server_socket.py", line 75, in __init__
+    server_side=True)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 1064, in wrap_socket
+    ciphers=ciphers)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 686, in __init__
+    self._context.load_cert_chain(certfile, keyfile)
+ssl.SSLError: [SSL] PEM lib (_ssl.c:2824)
+
+
+
+2016-03-29 11:55:07,252 - socket_app_py - INFO - Starting server...
+2016-03-29 11:55:07,253 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 11:55:07,253 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 11:55:07,255 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:/Users/Dani/PycharmProjects/SSII_Proyecto_3\server_socket.py", line 88, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 12:00:32,096 - socket_app_py - INFO - Stopping the server...
+2016-03-29 12:00:32,097 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 12:00:32,098 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:/Users/Dani/PycharmProjects/SSII_Proyecto_3\server_socket.py", line 104, in stop_server
+    self.socket.shutdown()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 12:00:32,098 - socket_app_py - INFO - Closing the server...
+2016-03-29 12:00:32,099 - socket_app_py - INFO - Error while trying to close the server.
+
+
+2016-03-29 12:00:32,100 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:/Users/Dani/PycharmProjects/SSII_Proyecto_3\server_socket.py", line 114, in close_server
+    self.socket.server_close()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 12:00:38,306 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 12:00:38,307 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 12:01:37,842 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 12:01:37,845 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 12:15:51,246 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 12:15:51,247 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 12:30:33,909 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 12:30:33,986 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 12:30:34,852 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-29 12:30:34,853 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 75, in __init__
+    server_side=True)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 1064, in wrap_socket
+    ciphers=ciphers)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 699, in __init__
+    if sock.getsockopt(SOL_SOCKET, SO_TYPE) != SOCK_STREAM:
+AttributeError: 'TCPServer' object has no attribute 'getsockopt'
+
+
+
+2016-03-29 12:30:34,854 - socket_app_py - INFO - Starting server...
+2016-03-29 12:30:34,855 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 12:30:34,855 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 12:30:34,856 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 88, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 12:31:11,321 - socket_app_py - INFO - Stopping the server...
+2016-03-29 12:31:11,321 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 12:31:11,322 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 104, in stop_server
+    self.socket.shutdown()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 12:31:13,633 - socket_app_py - INFO - Stopping the server...
+2016-03-29 12:31:13,633 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 12:31:13,634 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 104, in stop_server
+    self.socket.shutdown()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 12:31:13,634 - socket_app_py - INFO - Closing the server...
+2016-03-29 12:31:13,634 - socket_app_py - INFO - Error while trying to close the server.
+
+
+2016-03-29 12:31:13,634 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 114, in close_server
+    self.socket.server_close()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 12:39:17,596 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 12:39:17,597 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 12:40:48,005 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 12:40:48,006 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 12:40:48,751 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-29 12:40:48,752 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 75, in __init__
+    server_side=True)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 1064, in wrap_socket
+    ciphers=ciphers)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 699, in __init__
+    if sock.getsockopt(SOL_SOCKET, SO_TYPE) != SOCK_STREAM:
+AttributeError: 'TCPServer' object has no attribute 'getsockopt'
+
+
+
+2016-03-29 12:40:48,752 - socket_app_py - INFO - Starting server...
+2016-03-29 12:40:48,753 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 12:40:48,753 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 12:40:48,753 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 88, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 12:50:58,931 - socket_app_py - INFO - Stopping the server...
+2016-03-29 12:50:58,932 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 12:50:58,933 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 104, in stop_server
+    logger.generate_error_message("Error while trying to start the server.")
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 12:50:58,933 - socket_app_py - INFO - Closing the server...
+2016-03-29 12:50:58,934 - socket_app_py - INFO - Error while trying to close the server.
+
+
+2016-03-29 12:50:58,934 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 114, in close_server
+    logger.generate_error_message("Error while trying to stop the server.")
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 12:51:00,159 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 12:51:00,160 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 12:51:01,096 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-29 12:51:01,097 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 80, in __init__
+    server_side=True)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 1064, in wrap_socket
+    ciphers=ciphers)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 699, in __init__
+    if sock.getsockopt(SOL_SOCKET, SO_TYPE) != SOCK_STREAM:
+AttributeError: 'TCPServer' object has no attribute 'getsockopt'
+
+
+
+2016-03-29 12:51:01,098 - socket_app_py - INFO - Starting server...
+2016-03-29 12:51:01,099 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 12:51:01,099 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 12:51:01,100 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 93, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 12:53:57,436 - socket_app_py - INFO - Stopping the server...
+2016-03-29 12:53:57,436 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 12:53:57,437 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 109, in stop_server
+    self.socket.shutdown()  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 12:56:05,658 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 12:56:05,659 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 12:56:06,427 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-29 12:56:06,428 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 81, in __init__
+    server_side=True)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 1064, in wrap_socket
+    ciphers=ciphers)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 699, in __init__
+    if sock.getsockopt(SOL_SOCKET, SO_TYPE) != SOCK_STREAM:
+AttributeError: 'TCPServer' object has no attribute 'getsockopt'
+
+
+
+2016-03-29 12:56:06,428 - socket_app_py - INFO - Starting server...
+2016-03-29 12:56:06,428 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 12:56:06,428 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 12:56:06,429 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 94, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 12:56:31,911 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 12:56:31,912 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 12:56:32,760 - socket_app_py - INFO - Starting server...
+2016-03-29 12:56:32,760 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 12:56:32,760 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 12:56:32,761 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 94, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLSocket' object has no attribute 'serve_forever'
+
+
+
+2016-03-29 12:57:13,805 - socket_app_py - INFO - Stopping the server...
+2016-03-29 12:57:13,805 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 12:57:13,806 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 110, in stop_server
+    self.socket.shutdown()  # To close the server
+TypeError: shutdown() missing 1 required positional argument: 'how'
+
+
+
+2016-03-29 12:57:15,947 - socket_app_py - INFO - Stopping the server...
+2016-03-29 12:57:15,947 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 12:57:15,948 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 110, in stop_server
+    self.socket.shutdown()  # To close the server
+TypeError: shutdown() missing 1 required positional argument: 'how'
+
+
+
+2016-03-29 12:57:15,948 - socket_app_py - INFO - Closing the server...
+2016-03-29 12:57:15,948 - socket_app_py - INFO - Error while trying to close the server.
+
+
+2016-03-29 12:57:15,948 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 120, in close_server
+    self.socket.server_close()  # To close the server
+AttributeError: 'SSLSocket' object has no attribute 'server_close'
+
+
+
+2016-03-29 13:01:04,987 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 13:01:04,988 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 13:01:05,712 - socket_app_py - INFO - Starting server...
+2016-03-29 13:01:05,713 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 13:01:05,713 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 13:01:05,713 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 94, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLSocket' object has no attribute 'serve_forever'
+
+
+
+2016-03-29 13:01:10,681 - socket_app_py - INFO - Stopping the server...
+2016-03-29 13:01:10,681 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 13:01:10,682 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 110, in stop_server
+    self.socket.shutdown(sck.SHUT_RDWR)  # To close the server
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 962, in shutdown
+    socket.shutdown(self, how)
+OSError: [WinError 10057] No se permitió una solicitud para enviar o recibir datos ya que el socket no está conectado y no se ha proporcionado ninguna dirección, al realizar el envío en un socket de datagramas por medio de una llamada sendto
+
+
+
+2016-03-29 13:03:40,979 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 13:03:41,004 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-29 13:03:41,005 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 74, in __init__
+    s = socketserver.TCPServer((host, port), MyTCPHandler, bind_and_activate)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\socketserver.py", line 443, in __init__
+    self.server_bind()
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\socketserver.py", line 457, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [WinError 10048] Solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)
+
+
+
+2016-03-29 13:03:41,005 - socket_app_py - INFO - Starting server...
+2016-03-29 13:03:41,006 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 13:03:41,006 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 13:03:41,006 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 94, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 13:04:40,305 - socket_app_py - INFO - Stopping the server...
+2016-03-29 13:04:40,305 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 13:04:40,305 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 110, in stop_server
+    self.socket.shutdown(sck.SHUT_RDWR)  # To close the server
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-29 13:04:46,535 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 13:04:46,535 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 13:04:46,537 - socket_app_py - INFO - Starting server...
+2016-03-29 13:04:46,537 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 13:04:46,537 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-29 13:04:46,538 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 94, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLSocket' object has no attribute 'serve_forever'
+
+
+
+2016-03-29 13:09:22,873 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 13:09:22,874 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 13:09:23,644 - socket_app_py - INFO - Starting server...
+2016-03-29 13:09:23,645 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 13:14:31,320 - socket_app_py - INFO - Stopping the server...
+2016-03-29 13:14:31,320 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 13:14:31,322 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 111, in stop_server
+    self.socket.shutdown(sck.SHUT_RDWR)  # To close the server
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 962, in shutdown
+    socket.shutdown(self, how)
+OSError: [WinError 10057] No se permitió una solicitud para enviar o recibir datos ya que el socket no está conectado y no se ha proporcionado ninguna dirección, al realizar el envío en un socket de datagramas por medio de una llamada sendto
+
+
+
+2016-03-29 13:14:45,168 - socket_app_py - INFO - Creating the server socket...
+2016-03-29 13:14:45,169 - socket_app_py - INFO - Server socket created successfully
+2016-03-29 13:14:45,936 - socket_app_py - INFO - Starting server...
+2016-03-29 13:14:45,936 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-29 13:15:00,782 - socket_app_py - INFO - Stopping the server...
+2016-03-29 13:15:00,782 - socket_app_py - INFO - Error while trying to stop the server.
+
+
+2016-03-29 13:15:00,783 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 111, in stop_server
+    self.socket.shutdown(sck.SHUT_RDWR)  # To close the server
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\ssl.py", line 962, in shutdown
+    socket.shutdown(self, how)
+OSError: [WinError 10057] No se permitió una solicitud para enviar o recibir datos ya que el socket no está conectado y no se ha proporcionado ninguna dirección, al realizar el envío en un socket de datagramas por medio de una llamada sendto
+
+
+
