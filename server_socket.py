@@ -22,7 +22,7 @@ class SSLServerSocket():
                  port,  # Server address (host,port)
                  certfile,  # Certificate path
                  keyfile,  # Key path
-                 ssl_version=ssl.PROTOCOL_TLSv1,  #Comunication protocol
+                 ssl_version=ssl.PROTOCOL_SSLv23,  #Comunication protocol
                  bind_and_activate=True):
 
         # class MyTCPHandler(socketserver.BaseRequestHandler):

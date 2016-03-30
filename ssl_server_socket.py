@@ -12,12 +12,14 @@ class SSLTCPServerSocket(TCPServer):
                  RequestHandlerClass,
                  certfile,  # Certificate path
                  keyfile,  # Key path
-                 ssl_version=ssl.PROTOCOL_TLSv1,  #Comunication protocol
+                 ssl_version=ssl.PROTOCOL_SSLv23,  #Comunicatio+n protocol
+                 ciphers="DEFAULT",
                  bind_and_activate=True):
         TCPServer.__init__(self, server_address, RequestHandlerClass, bind_and_activate)
         self.certfile = certfile
         self.keyfile = keyfile
         self.ssl_version = ssl_version
+        self.ciphers=ciphers
 
     def get_request(self):
         newsocket, fromaddr = self.socket.accept()
@@ -27,7 +29,8 @@ class SSLTCPServerSocket(TCPServer):
                                  ca_certs="sslserver.cer",  # We trust in all the certificates signed by this ca (or this ca itself)
                                  cert_reqs=ssl.CERT_REQUIRED,
                                  keyfile = self.keyfile,
-                                 ssl_version = self.ssl_version)
+                                 ssl_version = self.ssl_version,
+                                 ciphers=self.ciphers)
         return connstream, fromaddr
 
 

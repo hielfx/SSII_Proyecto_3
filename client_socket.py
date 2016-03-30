@@ -13,7 +13,7 @@ import ssl
 
 class SSLClientSocket:
 
-    def __init__(self, ssl_version=ssl.PROTOCOL_TLSv1):
+    def __init__(self, ssl_version=ssl.PROTOCOL_TLSv1_2, ciphers="DEFAULT"):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # SSL wrap only works for SOCK_STREAM sockets
         s.settimeout(5)  # If the socket doesnt receive a response in 5 seconds it will raise a exception
         self.socket = ssl.wrap_socket(s,
@@ -21,7 +21,8 @@ class SSLClientSocket:
                            certfile="sslclient.crt.pem",
                            keyfile="sslclient.key.pem",
                            cert_reqs=ssl.CERT_REQUIRED,
-                           ssl_version=ssl.PROTOCOL_TLSv1)
+                           ssl_version=ssl_version,
+                           ciphers=ciphers)
 
     def connect(self, host='127.0.0.1', port=7070):
         # try:
