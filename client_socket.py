@@ -17,7 +17,7 @@ class SSLClientSocket:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # SSL wrap only works for SOCK_STREAM sockets
         s.settimeout(5)  # If the socket doesnt receive a response in 5 seconds it will raise a exception
         self.socket = ssl.wrap_socket(s,
-                           ca_certs="sslserver.cer",
+                           ca_certs="sslserver.crt.pem",
                            certfile="sslclient.crt.pem",
                            keyfile="sslclient.key.pem",
                            cert_reqs=ssl.CERT_REQUIRED,

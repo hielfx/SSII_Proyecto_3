@@ -22,9 +22,9 @@ stable_integrity_messages = 0
 
 def generate_nonce():
     u_id = socket.gethostname()
-    a_id = "banktransfer"
+    a_id = "messagesend"
     timeStamp = str(datetime.datetime.now())
-    salt = "SSII1516"
+    salt = "SSII3516"
 
     result = u_id+a_id+timeStamp+salt
 

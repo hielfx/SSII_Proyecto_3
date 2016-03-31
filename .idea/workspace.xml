@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3568d3c7-4e2d-4e3e-bc65-988b1105bbd9" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\chart_main.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\prueba cliente.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socket_app_py.db" afterPath="$PROJECT_DIR$/socket_app_py.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui_utils.py" afterPath="$PROJECT_DIR$/gui_utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client_socket.py" afterPath="$PROJECT_DIR$/client_socket.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crypt_utils.py" afterPath="$PROJECT_DIR$/crypt_utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server_socket.py" afterPath="$PROJECT_DIR$/server_socket.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socket.log" afterPath="$PROJECT_DIR$/socket.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ssl_server_socket.py" afterPath="$PROJECT_DIR$/ssl_server_socket.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SSII_Proyecto_3.iws" />
@@ -20,10 +25,11 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/SSII_Proyecto_3$prueba_cliente.coverage" NAME="prueba cliente Coverage Results" MODIFIED="1459287909386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SSII_Proyecto_3$Unittests_in_socket_tests.coverage" NAME="Unittests in socket_tests Coverage Results" MODIFIED="1459420797197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SSII_Proyecto_3$Unittests_in_TEST.coverage" NAME="Unittests in TEST Coverage Results" MODIFIED="1459250326705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/SSII_Proyecto_3$run_server_gui.coverage" NAME="run_server_gui Coverage Results" MODIFIED="1459418991994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SSII_Proyecto_3$run_server_gui.coverage" NAME="run_server_gui Coverage Results" MODIFIED="1459420419038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SSII_Proyecto_3$prueba_servidor.coverage" NAME="prueba servidor Coverage Results" MODIFIED="1459277914758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/SSII_Proyecto_3$run_client_gui.coverage" NAME="run_client_gui Coverage Results" MODIFIED="1459418993590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SSII_Proyecto_3$run_client_gui.coverage" NAME="run_client_gui Coverage Results" MODIFIED="1459420421481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -40,8 +46,8 @@
       <file leaf-file-name="server_socket.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server_socket.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1439" max-vertical-offset="2380">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1598">
+              <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
               <folding>
                 <element signature="e#48#67#0" expanded="true" />
               </folding>
@@ -49,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client_socket.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="client_socket.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client_socket.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.310345" vertical-offset="1089" max-vertical-offset="1683">
-              <caret line="71" column="21" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.5263158" vertical-offset="92" max-vertical-offset="1683">
+              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -62,8 +68,8 @@
       <file leaf-file-name="ssl_server_socket.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ssl_server_socket.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.724138" vertical-offset="479" max-vertical-offset="1955">
-              <caret line="55" column="19" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="19" />
+            <state vertical-scroll-proportion="-16.413794" vertical-offset="0" max-vertical-offset="1955">
+              <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
               <folding>
                 <element signature="e#30#102#0" expanded="true" />
               </folding>
@@ -71,31 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="socketserver.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/socketserver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="10512" max-vertical-offset="13022">
-              <caret line="628" column="0" selection-start-line="628" selection-start-column="0" selection-end-line="628" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="threading.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/threading.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="14575" max-vertical-offset="23137">
-              <caret line="870" column="0" selection-start-line="870" selection-start-column="0" selection-end-line="870" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gui_utils.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gui_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3802817" vertical-offset="2585" max-vertical-offset="4709">
-              <caret line="160" column="28" selection-start-line="160" selection-start-column="28" selection-end-line="160" selection-end-column="28" />
+            <state vertical-scroll-proportion="-14.068966" vertical-offset="510" max-vertical-offset="4709">
+              <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
               <folding>
                 <element signature="e#47#82#0" expanded="true" />
               </folding>
@@ -103,16 +89,46 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="sslserver.cer" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sslserver.cer">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sslserver.crt.pem" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sslserver.crt.pem">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="crypt_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crypt_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.206897" vertical-offset="1141" max-vertical-offset="2601">
-              <caret line="87" column="18" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
+            <state vertical-scroll-proportion="-5.275862" vertical-offset="0" max-vertical-offset="2601">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
-                <marker date="1459416160311" expanded="true" signature="881:924" placeholder="SELECT COUNT..." />
-                <marker date="1459416160311" expanded="true" signature="2783:2845" placeholder="SELECT * FRO..sqlite_master..." />
-                <marker date="1459416160311" expanded="true" signature="4218:4315" placeholder="INSERT INTO ..." />
+                <marker date="1459423207836" expanded="true" signature="880:923" placeholder="SELECT COUNT..." />
+                <marker date="1459423207836" expanded="true" signature="2782:2844" placeholder="SELECT * FRO..sqlite_master..." />
+                <marker date="1459423207836" expanded="true" signature="4217:4314" placeholder="INSERT INTO ..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="socket_tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/socket_tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="2227">
+              <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,28 +139,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.5" vertical-offset="35652" max-vertical-offset="36244">
-              <caret line="2121" column="62" selection-start-line="2088" selection-start-column="68" selection-end-line="2088" selection-end-column="394" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run_server_gui.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run_server_gui.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run_client_gui.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run_client_gui.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="221">
-              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+            <state vertical-scroll-proportion="-13.5" vertical-offset="37369" max-vertical-offset="37961">
+              <caret line="2222" column="0" selection-start-line="2088" selection-start-column="68" selection-end-line="2088" selection-end-column="394" />
               <folding />
             </state>
           </provider>
@@ -163,12 +159,13 @@
         <option value="$PROJECT_DIR$/notSSLCertificate.crt.pem" />
         <option value="$PROJECT_DIR$/prueba cliente.py" />
         <option value="$PROJECT_DIR$/prueba servidor.py" />
-        <option value="$PROJECT_DIR$/server_socket.py" />
-        <option value="$PROJECT_DIR$/client_socket.py" />
-        <option value="$PROJECT_DIR$/ssl_server_socket.py" />
-        <option value="$PROJECT_DIR$/crypt_utils.py" />
         <option value="$PROJECT_DIR$/socket.log" />
         <option value="$PROJECT_DIR$/gui_utils.py" />
+        <option value="$PROJECT_DIR$/sslserver.crt.pem" />
+        <option value="$PROJECT_DIR$/client_socket.py" />
+        <option value="$PROJECT_DIR$/server_socket.py" />
+        <option value="$PROJECT_DIR$/ssl_server_socket.py" />
+        <option value="$PROJECT_DIR$/crypt_utils.py" />
       </list>
     </option>
   </component>
@@ -212,72 +209,6 @@
               <option name="myItemId" value="SSII_Proyecto_3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.5.0 (C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SSII_Proyecto_3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.5.0 (C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SSII_Proyecto_3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.5.0 (C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tkinter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SSII_Proyecto_3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.5.0 (C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Python35-32" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -313,7 +244,7 @@
       <recent name="C:\Users\Dani\PycharmProjects\SSII_Proyecto_3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_server_gui">
+  <component name="RunManager" selected="Python tests.Unittests in socket_tests">
     <configuration default="false" name="run_server_gui" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -356,31 +287,6 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests in ssl_server_socket" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SSII_Proyecto_3" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\ssl_server_socket.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="prueba servidor" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -417,6 +323,31 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/prueba cliente.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in socket_tests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SSII_Proyecto_3" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/socket_tests.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
@@ -612,17 +543,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.run_server_gui" />
       <item index="1" class="java.lang.String" itemvalue="Python.run_client_gui" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in ssl_server_socket" />
-      <item index="3" class="java.lang.String" itemvalue="Python.prueba servidor" />
-      <item index="4" class="java.lang.String" itemvalue="Python.prueba cliente" />
+      <item index="2" class="java.lang.String" itemvalue="Python.prueba servidor" />
+      <item index="3" class="java.lang.String" itemvalue="Python.prueba cliente" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in socket_tests" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.run_client_gui" />
-        <item index="1" class="java.lang.String" itemvalue="Python.run_server_gui" />
-        <item index="2" class="java.lang.String" itemvalue="Python.prueba cliente" />
-        <item index="3" class="java.lang.String" itemvalue="Python.prueba servidor" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in ssl_server_socket" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in socket_tests" />
+        <item index="1" class="java.lang.String" itemvalue="Python.run_client_gui" />
+        <item index="2" class="java.lang.String" itemvalue="Python.run_server_gui" />
+        <item index="3" class="java.lang.String" itemvalue="Python.prueba cliente" />
+        <item index="4" class="java.lang.String" itemvalue="Python.prueba servidor" />
       </list>
     </recent_temporary>
   </component>
@@ -685,7 +616,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459416256752</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Deleted prints and traceback">
+      <created>1459419113094</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1459419113094</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -721,7 +658,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3267974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2806354" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27987897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -748,7 +685,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3267974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2806354" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2806354" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -781,7 +718,8 @@
     <MESSAGE value="With TLSv1_2" />
     <MESSAGE value="Working with connect and send in the same moment and close after the send" />
     <MESSAGE value="Working with username and password" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working with username and password" />
+    <MESSAGE value="Deleted prints and traceback" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted prints and traceback" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -813,9 +751,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1118" max-vertical-offset="2601">
           <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
           <folding>
-            <marker date="1459416160311" expanded="true" signature="881:924" placeholder="SELECT COUNT..." />
-            <marker date="1459416160311" expanded="true" signature="2783:2845" placeholder="SELECT * FRO..sqlite_master..." />
-            <marker date="1459416160311" expanded="true" signature="4218:4315" placeholder="INSERT INTO ..." />
+            <marker date="1459423207836" expanded="true" signature="880:923" placeholder="SELECT COUNT..." />
+            <marker date="1459423207836" expanded="true" signature="2782:2844" placeholder="SELECT * FRO..sqlite_master..." />
+            <marker date="1459423207836" expanded="true" signature="4217:4314" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -1007,13 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prueba cliente.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="374">
-          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ssl_server_socket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1513">
@@ -1050,13 +981,6 @@
           <folding>
             <element signature="e#48#67#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prueba cliente.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="340">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1137,20 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sslserver.cer">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prueba cliente.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="10" column="58" selection-start-line="4" selection-start-column="0" selection-end-line="10" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run_client_gui.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
@@ -1183,21 +1093,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/threading.py">
+    <entry file="file://$PROJECT_DIR$/socket.log">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="14575" max-vertical-offset="23137">
-          <caret line="870" column="0" selection-start-line="870" selection-start-column="0" selection-end-line="870" selection-end-column="0" />
+        <state vertical-scroll-proportion="-13.5" vertical-offset="37369" max-vertical-offset="37961">
+          <caret line="2222" column="0" selection-start-line="2088" selection-start-column="68" selection-end-line="2088" selection-end-column="394" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server_socket.py">
+    <entry file="file://$PROJECT_DIR$/sslserver.crt.pem">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1235" max-vertical-offset="2380">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <element signature="e#48#67#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1209,54 +1120,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssl_server_socket.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.724138" vertical-offset="479" max-vertical-offset="1955">
-          <caret line="55" column="19" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="19" />
-          <folding>
-            <element signature="e#30#102#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/socket.log">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.5" vertical-offset="35652" max-vertical-offset="36244">
-          <caret line="2121" column="62" selection-start-line="2088" selection-start-column="68" selection-end-line="2088" selection-end-column="394" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crypt_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.206897" vertical-offset="1141" max-vertical-offset="2601">
-          <caret line="87" column="18" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
-          <folding>
-            <marker date="1459416160311" expanded="true" signature="881:924" placeholder="SELECT COUNT..." />
-            <marker date="1459416160311" expanded="true" signature="2783:2845" placeholder="SELECT * FRO..sqlite_master..." />
-            <marker date="1459416160311" expanded="true" signature="4218:4315" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client_socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.310345" vertical-offset="1089" max-vertical-offset="1683">
-          <caret line="71" column="21" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.19349316" vertical-offset="14575" max-vertical-offset="23137">
+          <caret line="870" column="0" selection-start-line="870" selection-start-column="0" selection-end-line="870" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3802817" vertical-offset="2585" max-vertical-offset="4709">
-          <caret line="160" column="28" selection-start-line="160" selection-start-column="28" selection-end-line="160" selection-end-column="28" />
+        <state vertical-scroll-proportion="-14.068966" vertical-offset="510" max-vertical-offset="4709">
+          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
           <folding>
             <element signature="e#47#82#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socket_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="2227">
+          <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypt_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.275862" vertical-offset="0" max-vertical-offset="2601">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <marker date="1459423207836" expanded="true" signature="880:923" placeholder="SELECT COUNT..." />
+            <marker date="1459423207836" expanded="true" signature="2782:2844" placeholder="SELECT * FRO..sqlite_master..." />
+            <marker date="1459423207836" expanded="true" signature="4217:4314" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssl_server_socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.413794" vertical-offset="0" max-vertical-offset="1955">
+          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+          <folding>
+            <element signature="e#30#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sslserver.cer">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server_socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="235" max-vertical-offset="1598">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding>
+            <element signature="e#48#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client_socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5263158" vertical-offset="92" max-vertical-offset="1683">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>

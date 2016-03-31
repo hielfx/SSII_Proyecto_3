@@ -26,7 +26,7 @@ class SSLTCPServerSocket(TCPServer):
         connstream = ssl.wrap_socket(newsocket,
                                  server_side=True,
                                  certfile = self.certfile,
-                                 ca_certs="sslserver.cer",  # We trust in all the certificates signed by this ca (or this ca itself)
+                                 ca_certs="sslserver.crt.pem",  # We trust in all the certificates signed by this ca (or this ca itself)
                                  cert_reqs=ssl.CERT_REQUIRED,
                                  keyfile = self.keyfile,
                                  ssl_version = self.ssl_version,

@@ -2163,3 +2163,65 @@ AttributeError: 'SSLServerSocket' object has no attribute 'socket'
 2016-03-31 12:11:10,732 - socket_app_py - INFO - Stopping the server...
 2016-03-31 12:11:10,967 - socket_app_py - INFO - Server stopped successfully.
 
+2016-03-31 12:33:07,071 - socket_app_py - INFO - Creating the server socket...
+2016-03-31 12:33:07,074 - socket_app_py - INFO - Error while trying to create the socket with ip '192.168.99.1:7070'
+
+
+2016-03-31 12:33:07,075 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 36, in __init__
+    s = SSLTCPServerSocket((host, port), MyTCPHandler, certfile, keyfile)
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\ssl_server_socket.py", line 18, in __init__
+    TCPServer.__init__(self, server_address, RequestHandlerClass, bind_and_activate)
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\socketserver.py", line 443, in __init__
+    self.server_bind()
+  File "C:\Users\Dani\AppData\Local\Programs\Python\Python35-32\lib\socketserver.py", line 457, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [WinError 10048] Solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)
+
+
+
+2016-03-31 12:33:07,075 - socket_app_py - INFO - Starting server...
+2016-03-31 12:33:07,075 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-31 12:33:07,076 - socket_app_py - INFO - Error while trying to start the server.
+
+
+2016-03-31 12:33:07,076 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\server_socket.py", line 50, in run_server
+    self.socket.serve_forever()  # The server will run forever
+AttributeError: 'SSLServerSocket' object has no attribute 'socket'
+
+
+
+2016-03-31 12:33:45,039 - socket_app_py - INFO - Creating the server socket...
+2016-03-31 12:33:45,041 - socket_app_py - INFO - Starting server...
+2016-03-31 12:33:45,041 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-31 12:33:55,632 - socket_app_py - INFO - Retrieving data...
+2016-03-31 12:33:55,632 - socket_app_py - INFO - 127.0.0.1 wrote: {"nonce": "940f3ed098e4f2908b4fe0e02c218eda8daffdb3f553e117dd49e8f1d7ec26db", "message": "\"{\\\"password\\\": \\\"SSII-PSI3\\\", \\\"message\\\": \\\"slkjflskdjlksdjlksdsf\\\", \\\"username\\\": \\\"PSI3-SSII\\\"}\"", "hmac": "3966b5bd4e6be684bb25a14613bb522999b6cf380239c594496ad9cdef8e4264"}
+2016-03-31 12:33:55,633 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 12:33:55,634 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 12:33:55,634 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 12:33:55,635 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 12:33:55,635 - socket_app_py - INFO - The NONCE 940f3ed098e4f2908b4fe0e02c218eda8daffdb3f553e117dd49e8f1d7ec26db isn't in the database
+2016-03-31 12:33:55,636 - socket_app_py - INFO - Checking the integrity of the message '{"password": "SSII-PSI3", "message": "slkjflskdjlksdjlksdsf", "username": "PSI3-SSII"}'
+2016-03-31 12:33:55,636 - socket_app_py - INFO - The integrity of the message '{"password": "SSII-PSI3", "message": "slkjflskdjlksdjlksdsf", "username": "PSI3-SSII"}' is correct
+2016-03-31 12:33:55,636 - socket_app_py - INFO - Checking username and password...
+2016-03-31 12:33:55,636 - socket_app_py - INFO - The username and password are correct.
+2016-03-31 12:33:55,636 - socket_app_py - INFO - Inserting NONCE in the Data Base...
+2016-03-31 12:33:55,636 - socket_app_py - DEBUG - INSERT statement: INSERT INTO transmission (nonce, insert_date, hex_hmac, integrity, message) VALUES ('940f3ed098e4f2908b4fe0e02c218eda8daffdb3f553e117dd49e8f1d7ec26db',?,'3966b5bd4e6be684bb25a14613bb522999b6cf380239c594496ad9cdef8e4264',?,'slkjflskdjlksdjlksdsf');
+2016-03-31 12:33:55,761 - socket_app_py - INFO - The NONCE has been saved correctly in the Data Base
+
+2016-03-31 12:33:55,762 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 12:33:55,762 - socket_app_py - INFO - Data sent.
+2016-03-31 13:12:13,888 - socket_app_py - INFO - Stopping the server...
+2016-03-31 13:12:14,277 - socket_app_py - INFO - Server stopped successfully.
+
+2016-03-31 13:12:16,925 - socket_app_py - INFO - Stopping the server...
+2016-03-31 13:12:16,926 - socket_app_py - INFO - Server stopped successfully.
+
+2016-03-31 13:12:16,926 - socket_app_py - INFO - Closing the server...
+2016-03-31 13:12:16,926 - socket_app_py - INFO - Server closed successfully.
+
+
