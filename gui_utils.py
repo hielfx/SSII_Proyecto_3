@@ -7,6 +7,8 @@ from server_socket import SSLServerSocket
 import threading
 import socket
 import ssl
+import traceback
+import json
 
 # Possible options to the message box's format
 msgbox_options = {"info": msgbox.showinfo,
@@ -126,93 +128,106 @@ def generate_client_interface():
             status['text'] = "connected"
             status['fg'] = "green"
 
-            stop_btn['state'] = tk.NORMAL
-            start_btn['state'] = tk.DISABLED
+            username = username_entry.get()
+            password = password_entry.get()
+            message = message_entry.get()
+            data_to_send = {"username": username,
+                            "password": password,
+                            "message":message}
 
-            origin_entry['state'] = tk.NORMAL
-            origin_label['state'] = tk.NORMAL
-            destiny_entry['state'] = tk.NORMAL
-            destiny_label['state'] = tk.NORMAL
-            amount_entry['state'] = tk.NORMAL
-            amount_label['state'] = tk.NORMAL
+            try:
+                _dict = client.send_data(json.dumps(data_to_send))
+                generate_server_response(_dict)  # We show the server response in a window
+            except socket.timeout:
+                generate_msgbox("Timeout", "Exceeded the timeout for the connection (timeout: 5 seconds).", "warning")
 
-            send_button['state'] = tk.NORMAL
+            # send_button['state'] = tk.NORMAL
 
         except Exception:
+            traceback.print_exc()
             generate_msgbox("Error", "You can not establish a connection because the target machine expressly "
                                         "rejected that connection. Check if the server socket is running.\n"
                                         "The connection address was '{0}:{1}'".format(host, port), "error")
         except socket.timeout:
             generate_msgbox("Timeout", "Exceeded the timeout for the connection when waiting for data (timeout: 5 seconds).", "warning")
 
-    start_btn = tk.Button(button_frame, text="Connect client", command=start_client_callback)
-    start_btn.pack(side=tk.LEFT, padx=1, pady=1)
-
-    def stop_client_callback():
-        client.close_socket()
-
+        # We close the socket after the connection
+        print("test")
+        globals()['client'].close_socket()
+        # We put the status 'not connected' again
         root.title("Client socket - Not connected")
         status['text'] = "stopped"
         status['fg'] = "red"
-        stop_btn['state'] = tk.DISABLED
-        start_btn['state'] = tk.NORMAL
+        # We clear the entry fields
+        username_entry.delete(0, tk.END)
+        password_entry.delete(0, tk.END)
+        message_entry.delete(0, tk.END)
+        # We focus again the username entry
+        username_entry.focus()
 
-        origin_entry['state'] = tk.DISABLED
-        origin_label['state'] = tk.DISABLED
-        destiny_entry['state'] = tk.DISABLED
-        destiny_label['state'] = tk.DISABLED
-        amount_entry['state'] = tk.DISABLED
-        amount_label['state'] = tk.DISABLED
+    start_btn = tk.Button(button_frame, text="Connect client", command=start_client_callback)
+    start_btn.pack(side=tk.LEFT, padx=1, pady=1)
 
-        send_button['state'] = tk.DISABLED
-
-        msgbox.showinfo("Disconnected", "The client was disconnected from the server.")
-
-    stop_btn = tk.Button(button_frame, text="Disconnect client", command=stop_client_callback, state=tk.DISABLED)
-    stop_btn.pack(side=tk.LEFT, padx=1, pady=1)
+    # def stop_client_callback():
+    #     client.close_socket()
+    #
+    #     root.title("Client socket - Not connected")
+    #     status['text'] = "stopped"
+    #     status['fg'] = "red"
+    #     stop_btn['state'] = tk.DISABLED
+    #     start_btn['state'] = tk.NORMAL
+    #
+    #     username_entry['state'] = tk.DISABLED
+    #     username_label['state'] = tk.DISABLED
+    #     password_entry['state'] = tk.DISABLED
+    #     password_label['state'] = tk.DISABLED
+    #     message_entry['state'] = tk.DISABLED
+    #     message_label['state'] = tk.DISABLED
+    #
+    #     # send_button['state'] = tk.DISABLED
+    #
+    #     msgbox.showinfo("Disconnected", "The client was disconnected from the server.")
+    #
+    # stop_btn = tk.Button(button_frame, text="Disconnect client", command=stop_client_callback, state=tk.DISABLED)
+    # stop_btn.pack(side=tk.LEFT, padx=1, pady=1)
 
     # Data frame
     data_frame = tk.Frame(root)
     data_frame.pack()
 
-    # Origin account name
-    origin_label = tk.Label(data_frame, text="Origin account name", state=tk.DISABLED)
-    origin_label.grid(row=0, column=0, padx=2, pady=2)
-    origin_entry = tk.Entry(data_frame, state=tk.DISABLED)
-    origin_entry.grid(row=1, column=0, padx=2, pady=2)
+    # Username
+    username_label = tk.Label(data_frame, text="Username")
+    username_label.grid(row=0, column=0, padx=2, pady=2)
+    username_entry = tk.Entry(data_frame)
+    username_entry.grid(row=1, column=0, padx=2, pady=2)
+    username_entry.focus()
 
-    coma_1 = tk.Label(data_frame, text=",")
-    coma_1.grid(row=0, column=1, padx=2, pady=2)
+    # Password
+    password_label = tk.Label(data_frame, text="Password")
+    password_label.grid(row=0, column=2, padx=2, pady=2)
+    password_entry = tk.Entry(data_frame, show="*")
+    password_entry.grid(row=1, column=2, padx=2, pady=2)
 
-    # Destiny account name
-    destiny_label = tk.Label(data_frame, text="Destiny account name", state=tk.DISABLED)
-    destiny_label.grid(row=0, column=2, padx=2, pady=2)
-    destiny_entry = tk.Entry(data_frame, state=tk.DISABLED)
-    destiny_entry.grid(row=1, column=2, padx=2, pady=2)
+    # Message
+    message_label = tk.Label(data_frame, text="Message")
+    message_label.grid(row=0, column=4, padx=2, pady=2)
+    message_entry = tk.Entry(data_frame)
+    message_entry.grid(row=1, column=4, padx=2, pady=2)
 
-    coma_2 = tk.Label(data_frame, text=",")
-    coma_2.grid(row=0, column=3, padx=2, pady=2)
-
-    # Transfer amount
-    amount_label = tk.Label(data_frame, text="Transfer amount", state=tk.DISABLED)
-    amount_label.grid(row=0, column=4, padx=2, pady=2)
-    amount_entry = tk.Entry(data_frame, state=tk.DISABLED)
-    amount_entry.grid(row=1, column=4, padx=2, pady=2)
-
-    def send_data_callback():
-        origin = origin_entry.get()
-        destiny = destiny_entry.get()
-        amount = amount_entry.get()
-        data_to_send = origin+", "+destiny+", "+amount
-
-        try:
-            _dict = client.send_data(data_to_send)
-            generate_server_response(_dict)  # We show the server response in a window
-        except socket.timeout:
-            generate_msgbox("Timeout", "Exceeded the timeout for the connection (timeout: 5 seconds).", "warning")
-
-    send_button = tk.Button(root, text="Send data", command=send_data_callback, state=tk.DISABLED)
-    send_button.pack(pady=(0, 3))
+    # def send_data_callback():
+    #     origin = username_entry.get()
+    #     destiny = password_entry.get()
+    #     amount = message_entry.get()
+    #     data_to_send = origin+", "+destiny+", "+amount
+    #
+    #     try:
+    #         _dict = client.send_data(data_to_send)
+    #         generate_server_response(_dict)  # We show the server response in a window
+    #     except socket.timeout:
+    #         generate_msgbox("Timeout", "Exceeded the timeout for the connection (timeout: 5 seconds).", "warning")
+    #
+    # send_button = tk.Button(root, text="Send data", command=send_data_callback, state=tk.DISABLED)
+    # send_button.pack(pady=(0, 3))
 
     def on_closing():
         if client is not None:
@@ -280,7 +295,7 @@ def generate_server_response(dict):
     accept_btn = tk.Button(root,text="Accept", command=accept_callback)
     accept_btn.pack(padx=2, pady=2)
 
-    root.mainloop()
+    # root.mainloop()
 
 if __name__ == "__main__":
     pass
