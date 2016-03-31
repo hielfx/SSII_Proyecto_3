@@ -1408,3 +1408,366 @@ TypeError: shutdown() takes 1 positional argument but 2 were given
 2016-03-31 03:09:57,411 - socket_app_py - INFO - Server closed successfully.
 
 
+2016-03-31 10:43:58,524 - socket_app_py - INFO - Creating the server socket...
+2016-03-31 10:43:58,561 - socket_app_py - INFO - Starting server...
+2016-03-31 10:43:58,562 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-31 10:44:11,980 - socket_app_py - INFO - Retrieving data...
+2016-03-31 10:44:11,987 - socket_app_py - INFO - 127.0.0.1 wrote: {"nonce": "f4980eaf84f4078fe14423d2fb20ef14caf8a078977eccf919f24aa9b7ebe178", "hmac": "3262a28e98bdd9448319243b1ae9b9be3a9e6aaff2cea4cecb63129711c548d4", "message": "{\"password\": \"kjhskjdhfkj\", \"message\": \"sdkfjksdfjsdf\", \"username\": \"kjdfhjkdshf\"}"}
+2016-03-31 10:44:12,006 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 10:44:12,010 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 10:44:12,011 - socket_app_py - INFO - The table transmission doesn't exists. Creating table...
+2016-03-31 10:44:12,101 - socket_app_py - INFO - Table 'transmission' created correctly
+
+2016-03-31 10:44:12,101 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 10:44:12,103 - socket_app_py - INFO - The NONCE f4980eaf84f4078fe14423d2fb20ef14caf8a078977eccf919f24aa9b7ebe178 isn't in the database
+2016-03-31 10:44:12,104 - socket_app_py - INFO - Checking the integrity of the message '{'message': 'sdkfjksdfjsdf', 'username': 'kjdfhjkdshf', 'password': 'kjhskjdhfkj'}'
+2016-03-31 10:45:44,356 - socket_app_py - INFO - Creating the server socket...
+2016-03-31 10:45:44,357 - socket_app_py - INFO - Starting server...
+2016-03-31 10:45:44,357 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-31 10:45:59,337 - socket_app_py - INFO - Retrieving data...
+2016-03-31 10:45:59,338 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "{\"password\": \"aafdsfasdfasdf\", \"message\": \"asdfadsfasdfadf\", \"username\": \"asfasdfasdf\"}", "nonce": "6a952e287a59c800c5039e3098562bc49900f41501243270bc096cc0beb8dc5a", "hmac": "e8eaba0105949b68543a468f40cdb784f5e43b2f3d33afe5ec4263c93da3faf5"}
+2016-03-31 10:45:59,338 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 10:45:59,339 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 10:45:59,339 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 10:45:59,339 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 10:45:59,340 - socket_app_py - INFO - The NONCE 6a952e287a59c800c5039e3098562bc49900f41501243270bc096cc0beb8dc5a isn't in the database
+2016-03-31 10:45:59,340 - socket_app_py - INFO - Checking the integrity of the message '{'username': 'asfasdfasdf', 'password': 'aafdsfasdfasdf', 'message': 'asdfadsfasdfadf'}'
+2016-03-31 10:45:59,340 - socket_app_py - WARNING - 
+     --> The integrity of the message '{'username': 'asfasdfasdf', 'password': 'aafdsfasdfasdf', 'message': 'asdfadsfasdfadf'}' failed!
+
+2016-03-31 10:45:59,341 - socket_app_py - INFO - Inserting NONCE in the Data Base...
+2016-03-31 10:45:59,341 - socket_app_py - DEBUG - INSERT statement: INSERT INTO transmission (nonce, insert_date, hex_hmac, integrity, message) VALUES ('6a952e287a59c800c5039e3098562bc49900f41501243270bc096cc0beb8dc5a',?,'e8eaba0105949b68543a468f40cdb784f5e43b2f3d33afe5ec4263c93da3faf5',?);
+2016-03-31 10:45:59,342 - socket_app_py - INFO - Error while trying to insert the NONCE in the Data Base
+
+
+
+2016-03-31 10:45:59,342 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:\Users\Dani\PycharmProjects\SSII_Proyecto_3\crypt_utils.py", line 133, in insert_hmac
+    cursor = conn.execute(insert, (now, integrity,))
+sqlite3.OperationalError: 4 values for 5 columns
+
+
+
+2016-03-31 10:45:59,342 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 10:45:59,343 - socket_app_py - INFO - Data sent.
+2016-03-31 10:48:11,418 - socket_app_py - INFO - Creating the server socket...
+2016-03-31 10:48:11,419 - socket_app_py - INFO - Starting server...
+2016-03-31 10:48:11,419 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-31 10:48:18,594 - socket_app_py - INFO - Retrieving data...
+2016-03-31 10:48:18,595 - socket_app_py - INFO - 127.0.0.1 wrote: {"nonce": "5772ee26e6c931315f3e90bbbfb1de5d7805b09382472cf53c0f40758433b943", "message": "\"{\\\"password\\\": \\\"asdfasdfasdf\\\", \\\"message\\\": \\\"adsfasdfasdfasdf\\\", \\\"username\\\": \\\"afsdfasdf\\\"}\"", "hmac": "def4143383bc37454d95de6e322882165d17387eae7dbf67f467762294b232d7"}
+2016-03-31 10:51:22,463 - socket_app_py - INFO - Creating the server socket...
+2016-03-31 10:51:22,465 - socket_app_py - INFO - Starting server...
+2016-03-31 10:51:22,465 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-31 10:51:32,493 - socket_app_py - INFO - Retrieving data...
+2016-03-31 10:51:32,493 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"message\\\": \\\"asdfasdfasdfadf\\\", \\\"password\\\": \\\"adsfasdfadsasdf\\\", \\\"username\\\": \\\"adfadfa\\\"}\"", "nonce": "f5bd400e3a0630401d4529e661531bd3305bf148e4cbc6b5ebe83e71f42fcbb1", "hmac": "887c26e45c6643b85a280c0b33519002c8b55140856797f795a7f9d47462a91e"}
+2016-03-31 10:53:05,960 - socket_app_py - INFO - Creating the server socket...
+2016-03-31 10:53:08,505 - socket_app_py - INFO - Starting server...
+2016-03-31 10:53:08,506 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-31 10:54:16,314 - socket_app_py - INFO - Retrieving data...
+2016-03-31 10:54:16,315 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"username\\\": \\\"asdf\\\", \\\"message\\\": \\\"addfsf\\\", \\\"password\\\": \\\"adfadsf\\\"}\"", "nonce": "6ad4d1719dbc45e7dbbd793644a17d0580494552095d8fea24de80062537e5c4", "hmac": "fe5ee8ea0e16755f2aa4feefa76e4e5b5aeece97cc4cac9b35c290432af9e76c"}
+2016-03-31 10:58:20,775 - socket_app_py - INFO - Creating the server socket...
+2016-03-31 10:58:20,776 - socket_app_py - INFO - Starting server...
+2016-03-31 10:58:20,777 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-31 10:58:26,068 - socket_app_py - INFO - Retrieving data...
+2016-03-31 10:58:26,070 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"username\\\": \\\"adfasdfasd\\\", \\\"message\\\": \\\"adsfasdfadsf\\\", \\\"password\\\": \\\"asdfadsf\\\"}\"", "nonce": "486d56e6144a598e2c14803df0d3ff30c069db513bbaef48333818509370c718", "hmac": "69200d77007f38ce5086e15005ed5274084086140661a91febddc5d6ca2e0e2d"}
+2016-03-31 10:58:34,546 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 10:58:34,549 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 10:58:34,550 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 10:58:34,551 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 10:58:34,556 - socket_app_py - INFO - The NONCE 486d56e6144a598e2c14803df0d3ff30c069db513bbaef48333818509370c718 isn't in the database
+2016-03-31 10:58:35,420 - socket_app_py - INFO - Checking the integrity of the message '{'message': 'adsfasdfadsf', 'username': 'adfasdfasd', 'password': 'asdfadsf'}'
+2016-03-31 10:59:51,445 - socket_app_py - INFO - Creating the server socket...
+2016-03-31 10:59:51,447 - socket_app_py - INFO - Starting server...
+2016-03-31 10:59:51,448 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-31 10:59:56,161 - socket_app_py - INFO - Retrieving data...
+2016-03-31 10:59:56,162 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"username\\\": \\\"asdfa\\\", \\\"message\\\": \\\"asdfasdfadsf\\\", \\\"password\\\": \\\"sfasdfasdfa\\\"}\"", "nonce": "a5401a8b195cd165445191a5bcbd763e82d890657606b667cb529f644a2ecb23", "hmac": "efc80185cb98e36207c9d92350dfafa7586be5869ae5d9bcfbdacf4aba16521f"}
+2016-03-31 10:59:58,423 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 10:59:58,424 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 10:59:58,425 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 10:59:58,425 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 10:59:58,427 - socket_app_py - INFO - The NONCE a5401a8b195cd165445191a5bcbd763e82d890657606b667cb529f644a2ecb23 isn't in the database
+2016-03-31 10:59:58,427 - socket_app_py - INFO - Checking the integrity of the message '{"username": "asdfa", "message": "asdfasdfadsf", "password": "sfasdfasdfa"}'
+2016-03-31 10:59:58,428 - socket_app_py - WARNING - 
+     --> The integrity of the message '{"username": "asdfa", "message": "asdfasdfadsf", "password": "sfasdfasdfa"}' failed!
+
+2016-03-31 10:59:58,429 - socket_app_py - INFO - Inserting NONCE in the Data Base...
+2016-03-31 10:59:58,430 - socket_app_py - DEBUG - INSERT statement: INSERT INTO transmission (nonce, insert_date, hex_hmac, integrity, message) VALUES ('a5401a8b195cd165445191a5bcbd763e82d890657606b667cb529f644a2ecb23',?,'efc80185cb98e36207c9d92350dfafa7586be5869ae5d9bcfbdacf4aba16521f',?);
+2016-03-31 10:59:58,431 - socket_app_py - INFO - Error while trying to insert the NONCE in the Data Base
+
+
+
+2016-03-31 10:59:58,432 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:/Users/Dani/PycharmProjects/SSII_Proyecto_3\crypt_utils.py", line 133, in insert_hmac
+    cursor = conn.execute(insert, (now, integrity,))
+sqlite3.OperationalError: 4 values for 5 columns
+
+
+
+2016-03-31 10:59:58,433 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 10:59:58,434 - socket_app_py - INFO - Data sent.
+2016-03-31 11:00:53,304 - socket_app_py - INFO - Creating the server socket...
+2016-03-31 11:00:53,306 - socket_app_py - INFO - Starting server...
+2016-03-31 11:00:53,307 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-31 11:01:06,331 - socket_app_py - INFO - Retrieving data...
+2016-03-31 11:01:06,332 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"message\\\": \\\"adfadfasdf\\\", \\\"password\\\": \\\"fasdfadsfadf\\\", \\\"username\\\": \\\"sadfads\\\"}\"", "nonce": "24bf71359292f2b8407f125540988e46cdbe181e7a7c89c4525e9bf90de822ac", "hmac": "04557aaf722dfde76a78f3d9522f944a6067daf422a07b9c669be6c1c4855f66"}
+2016-03-31 11:01:10,134 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 11:01:10,136 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 11:01:10,138 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 11:01:10,139 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 11:01:10,142 - socket_app_py - INFO - The NONCE 24bf71359292f2b8407f125540988e46cdbe181e7a7c89c4525e9bf90de822ac isn't in the database
+2016-03-31 11:01:10,507 - socket_app_py - INFO - Checking the integrity of the message '{"message": "adfadfasdf", "password": "fasdfadsfadf", "username": "sadfads"}'
+2016-03-31 11:01:10,509 - socket_app_py - WARNING - 
+     --> The integrity of the message '{"message": "adfadfasdf", "password": "fasdfadsfadf", "username": "sadfads"}' failed!
+
+2016-03-31 11:01:10,778 - socket_app_py - INFO - Inserting NONCE in the Data Base...
+2016-03-31 11:01:10,780 - socket_app_py - DEBUG - INSERT statement: INSERT INTO transmission (nonce, insert_date, hex_hmac, integrity, message) VALUES ('24bf71359292f2b8407f125540988e46cdbe181e7a7c89c4525e9bf90de822ac',?,'04557aaf722dfde76a78f3d9522f944a6067daf422a07b9c669be6c1c4855f66',?);
+2016-03-31 11:01:10,781 - socket_app_py - INFO - Error while trying to insert the NONCE in the Data Base
+
+
+
+2016-03-31 11:01:10,785 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:/Users/Dani/PycharmProjects/SSII_Proyecto_3\crypt_utils.py", line 133, in insert_hmac
+    cursor = conn.execute(insert, (now, integrity,))
+sqlite3.OperationalError: 4 values for 5 columns
+
+
+
+2016-03-31 11:01:10,786 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 11:01:10,788 - socket_app_py - INFO - Data sent.
+2016-03-31 11:01:50,663 - socket_app_py - INFO - Retrieving data...
+2016-03-31 11:01:50,664 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"message\\\": \\\"asdfasdfasdfasdf\\\", \\\"password\\\": \\\"asdfasdfasdfasdfasdfasdfasdfadf\\\", \\\"username\\\": \\\"asdfasdf\\\"}\"", "nonce": "9cc8366bd1f7cdba0b8f835f9a96767ee37245f97d901a6a50bcdfcb7546363b", "hmac": "b593ca9b36d4fa617842d6f9db7811b5332fe37312e7971d335a6f3969cfc3cb"}
+2016-03-31 11:03:03,653 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 11:03:03,654 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 11:03:03,654 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 11:03:03,655 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 11:03:03,656 - socket_app_py - INFO - The NONCE 9cc8366bd1f7cdba0b8f835f9a96767ee37245f97d901a6a50bcdfcb7546363b isn't in the database
+2016-03-31 11:03:03,657 - socket_app_py - INFO - Checking the integrity of the message '{"message": "asdfasdfasdfasdf", "password": "asdfasdfasdfasdfasdfasdfasdfadf", "username": "asdfasdf"}'
+2016-03-31 11:03:03,658 - socket_app_py - WARNING - 
+     --> The integrity of the message '{"message": "asdfasdfasdfasdf", "password": "asdfasdfasdfasdfasdfasdfasdfadf", "username": "asdfasdf"}' failed!
+
+2016-03-31 11:03:03,659 - socket_app_py - INFO - Inserting NONCE in the Data Base...
+2016-03-31 11:03:03,659 - socket_app_py - DEBUG - INSERT statement: INSERT INTO transmission (nonce, insert_date, hex_hmac, integrity, message) VALUES ('9cc8366bd1f7cdba0b8f835f9a96767ee37245f97d901a6a50bcdfcb7546363b',?,'b593ca9b36d4fa617842d6f9db7811b5332fe37312e7971d335a6f3969cfc3cb',?);
+2016-03-31 11:03:03,660 - socket_app_py - INFO - Error while trying to insert the NONCE in the Data Base
+
+
+
+2016-03-31 11:03:03,661 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:/Users/Dani/PycharmProjects/SSII_Proyecto_3\crypt_utils.py", line 133, in insert_hmac
+    cursor = conn.execute(insert, (now, integrity,))
+sqlite3.OperationalError: 4 values for 5 columns
+
+
+
+2016-03-31 11:03:03,662 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 11:03:03,662 - socket_app_py - INFO - Data sent.
+2016-03-31 11:03:09,408 - socket_app_py - INFO - Retrieving data...
+2016-03-31 11:03:09,409 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"message\\\": \\\"asdfasdf\\\", \\\"password\\\": \\\"aadsfasdf\\\", \\\"username\\\": \\\"adfasdfasdf\\\"}\"", "nonce": "fc0a97e35464465420b481212efe9b05dfe26774e0f5abbe26461ddcac65f04f", "hmac": "482404121f2849eb57d6bd542b4007451edf79f43b950dd5a346d140310a824f"}
+2016-03-31 11:06:07,054 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 11:06:07,055 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 11:06:07,055 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 11:06:07,056 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 11:06:07,057 - socket_app_py - INFO - The NONCE fc0a97e35464465420b481212efe9b05dfe26774e0f5abbe26461ddcac65f04f isn't in the database
+2016-03-31 11:06:08,072 - socket_app_py - INFO - Checking the integrity of the message '{"message": "asdfasdf", "password": "aadsfasdf", "username": "adfasdfasdf"}'
+2016-03-31 11:06:08,073 - socket_app_py - WARNING - 
+     --> The integrity of the message '{"message": "asdfasdf", "password": "aadsfasdf", "username": "adfasdfasdf"}' failed!
+
+2016-03-31 11:06:08,074 - socket_app_py - INFO - Inserting NONCE in the Data Base...
+2016-03-31 11:06:08,075 - socket_app_py - DEBUG - INSERT statement: INSERT INTO transmission (nonce, insert_date, hex_hmac, integrity, message) VALUES ('fc0a97e35464465420b481212efe9b05dfe26774e0f5abbe26461ddcac65f04f',?,'482404121f2849eb57d6bd542b4007451edf79f43b950dd5a346d140310a824f',?);
+2016-03-31 11:06:08,076 - socket_app_py - INFO - Error while trying to insert the NONCE in the Data Base
+
+
+
+2016-03-31 11:06:08,077 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:/Users/Dani/PycharmProjects/SSII_Proyecto_3\crypt_utils.py", line 133, in insert_hmac
+    cursor = conn.execute(insert, (now, integrity,))
+sqlite3.OperationalError: 4 values for 5 columns
+
+
+
+2016-03-31 11:06:08,077 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 11:06:15,351 - socket_app_py - INFO - Retrieving data...
+2016-03-31 11:06:15,352 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"message\\\": \\\"kjkjh\\\", \\\"password\\\": \\\"kjkjh\\\", \\\"username\\\": \\\"jh\\\"}\"", "nonce": "986ed5e21db9106386efd349aa97fef6e15eef20d0879b4ef782334f8d5e0bc2", "hmac": "c5a6729dbfdb01b1693ae4e86494831a8557434be9ceccfc21e817704cf3e04e"}
+2016-03-31 11:06:21,371 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 11:06:21,372 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 11:06:21,373 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 11:06:21,374 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 11:06:21,375 - socket_app_py - INFO - The NONCE 986ed5e21db9106386efd349aa97fef6e15eef20d0879b4ef782334f8d5e0bc2 isn't in the database
+2016-03-31 11:07:11,706 - socket_app_py - INFO - Creating the server socket...
+2016-03-31 11:07:11,708 - socket_app_py - INFO - Starting server...
+2016-03-31 11:07:11,709 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-31 11:07:17,691 - socket_app_py - INFO - Retrieving data...
+2016-03-31 11:07:17,692 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"message\\\": \\\"lkjlkj\\\", \\\"password\\\": \\\"lkjlkj\\\", \\\"username\\\": \\\"kljklj\\\"}\"", "nonce": "bc9f7f6ba5af6c562aa755d54d551c323df7341d3add208202e312b2ace5d405", "hmac": "ab87ef8757edf3221cf9db00a26b9a89ceadaebddcbb7f2c5f199a1a06c2d45f"}
+2016-03-31 11:07:19,830 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 11:07:19,833 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 11:07:19,834 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 11:07:19,836 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 11:07:19,840 - socket_app_py - INFO - The NONCE bc9f7f6ba5af6c562aa755d54d551c323df7341d3add208202e312b2ace5d405 isn't in the database
+2016-03-31 11:07:20,354 - socket_app_py - INFO - Checking the integrity of the message '{"message": "lkjlkj", "password": "lkjlkj", "username": "kljklj"}'
+2016-03-31 11:07:20,355 - socket_app_py - INFO - The integrity of the message '{"message": "lkjlkj", "password": "lkjlkj", "username": "kljklj"}' is correct
+2016-03-31 11:07:20,357 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 11:07:20,358 - socket_app_py - INFO - Data sent.
+2016-03-31 11:10:24,373 - socket_app_py - INFO - Retrieving data...
+2016-03-31 11:10:24,374 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"message\\\": \\\"jhkj\\\", \\\"password\\\": \\\"kjhkjhk\\\", \\\"username\\\": \\\"kjhjkh\\\"}\"", "nonce": "27e8f12332d9b36aca79bc24e4081a6ed3a8b957c9a4680f422e2725272b0fc0", "hmac": "618e925a9b1428fe6beb75db603ddbb08b4d8ce7ebf814cbb4f631ceb2b794f8"}
+2016-03-31 11:10:24,375 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 11:10:24,376 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 11:10:24,377 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 11:10:24,377 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 11:10:24,379 - socket_app_py - INFO - The NONCE 27e8f12332d9b36aca79bc24e4081a6ed3a8b957c9a4680f422e2725272b0fc0 isn't in the database
+2016-03-31 11:10:43,447 - socket_app_py - INFO - Checking the integrity of the message '{"message": "jhkj", "password": "kjhkjhk", "username": "kjhjkh"}'
+2016-03-31 11:10:43,449 - socket_app_py - INFO - The integrity of the message '{"message": "jhkj", "password": "kjhkjhk", "username": "kjhjkh"}' is correct
+2016-03-31 11:11:45,388 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 11:11:52,014 - socket_app_py - INFO - Data sent.
+2016-03-31 11:12:42,497 - socket_app_py - INFO - Retrieving data...
+2016-03-31 11:12:42,498 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"username\\\": \\\"adfasdf\\\", \\\"message\\\": \\\"asdfasdfadf\\\", \\\"password\\\": \\\"adsfasdf\\\"}\"", "hmac": "66b1720a02ff8e283d005cb288fe4c4965e9b441e482e825c926675cc80aad3b", "nonce": "8ced932ad85ba4f0bf9d363877d3019fb557e445aff6580c199004b74f265bec"}
+2016-03-31 11:12:42,500 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 11:12:42,501 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 11:12:42,501 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 11:12:42,502 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 11:12:42,503 - socket_app_py - INFO - The NONCE 8ced932ad85ba4f0bf9d363877d3019fb557e445aff6580c199004b74f265bec isn't in the database
+2016-03-31 11:12:44,852 - socket_app_py - INFO - Checking the integrity of the message '{"username": "adfasdf", "message": "asdfasdfadf", "password": "adsfasdf"}'
+2016-03-31 11:12:44,853 - socket_app_py - INFO - The integrity of the message '{"username": "adfasdf", "message": "asdfasdfadf", "password": "adsfasdf"}' is correct
+2016-03-31 11:12:44,854 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 11:12:44,854 - socket_app_py - INFO - Data sent.
+2016-03-31 11:15:00,397 - socket_app_py - INFO - Retrieving data...
+2016-03-31 11:15:00,398 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"username\\\": \\\"PSI3-SSII\\\", \\\"message\\\": \\\"prueba\\\", \\\"password\\\": \\\"SSII-PSI3\\\"}\"", "hmac": "98a65543f7451dfafa8f7186934c76c58433ce9ad4544f5e4cfef28138f3291d", "nonce": "335f14f23cd418d5c7bb836a8bdd50eaf03b5337fe7d042fad89064aa8bfd197"}
+2016-03-31 11:15:00,399 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 11:15:00,400 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 11:15:00,401 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 11:15:00,401 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 11:15:00,403 - socket_app_py - INFO - The NONCE 335f14f23cd418d5c7bb836a8bdd50eaf03b5337fe7d042fad89064aa8bfd197 isn't in the database
+2016-03-31 11:15:03,343 - socket_app_py - INFO - Checking the integrity of the message '{"username": "PSI3-SSII", "message": "prueba", "password": "SSII-PSI3"}'
+2016-03-31 11:15:03,344 - socket_app_py - INFO - The integrity of the message '{"username": "PSI3-SSII", "message": "prueba", "password": "SSII-PSI3"}' is correct
+2016-03-31 11:15:03,345 - socket_app_py - INFO - Inserting NONCE in the Data Base...
+2016-03-31 11:15:03,346 - socket_app_py - DEBUG - INSERT statement: INSERT INTO transmission (nonce, insert_date, hex_hmac, integrity, message) VALUES ('335f14f23cd418d5c7bb836a8bdd50eaf03b5337fe7d042fad89064aa8bfd197',?,'98a65543f7451dfafa8f7186934c76c58433ce9ad4544f5e4cfef28138f3291d',?);
+2016-03-31 11:15:03,347 - socket_app_py - INFO - Error while trying to insert the NONCE in the Data Base
+
+
+
+2016-03-31 11:15:03,348 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:/Users/Dani/PycharmProjects/SSII_Proyecto_3\crypt_utils.py", line 134, in insert_hmac
+    cursor = conn.execute(insert, (now, integrity,))
+sqlite3.OperationalError: 4 values for 5 columns
+
+
+
+2016-03-31 11:15:03,349 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 11:15:03,350 - socket_app_py - INFO - Data sent.
+2016-03-31 11:16:45,356 - socket_app_py - INFO - Retrieving data...
+2016-03-31 11:16:45,357 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"username\\\": \\\"PSI3-SSII\\\", \\\"message\\\": \\\"prueba\\\", \\\"password\\\": \\\"SSII-PSI3\\\"}\"", "hmac": "98a65543f7451dfafa8f7186934c76c58433ce9ad4544f5e4cfef28138f3291d", "nonce": "8dd2f34f4a83e3a6a0ffc43a04404fb6d44cbfa8958f03dea2d8eb1531427931"}
+2016-03-31 11:16:45,359 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 11:16:45,361 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 11:16:45,362 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 11:16:45,363 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 11:16:45,365 - socket_app_py - INFO - The NONCE 8dd2f34f4a83e3a6a0ffc43a04404fb6d44cbfa8958f03dea2d8eb1531427931 isn't in the database
+2016-03-31 11:16:48,653 - socket_app_py - INFO - Checking the integrity of the message '{"username": "PSI3-SSII", "message": "prueba", "password": "SSII-PSI3"}'
+2016-03-31 11:16:48,654 - socket_app_py - INFO - The integrity of the message '{"username": "PSI3-SSII", "message": "prueba", "password": "SSII-PSI3"}' is correct
+2016-03-31 11:16:48,655 - socket_app_py - INFO - Inserting NONCE in the Data Base...
+2016-03-31 11:16:48,656 - socket_app_py - DEBUG - INSERT statement: INSERT INTO transmission (nonce, insert_date, hex_hmac, integrity, message) VALUES ('8dd2f34f4a83e3a6a0ffc43a04404fb6d44cbfa8958f03dea2d8eb1531427931',?,'98a65543f7451dfafa8f7186934c76c58433ce9ad4544f5e4cfef28138f3291d',?);
+2016-03-31 11:16:48,657 - socket_app_py - INFO - Error while trying to insert the NONCE in the Data Base
+
+
+
+2016-03-31 11:16:48,657 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:/Users/Dani/PycharmProjects/SSII_Proyecto_3\crypt_utils.py", line 134, in insert_hmac
+    cursor = conn.execute(insert, (now, integrity,))
+sqlite3.OperationalError: 4 values for 5 columns
+
+
+
+2016-03-31 11:16:48,658 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 11:16:48,659 - socket_app_py - INFO - Data sent.
+2016-03-31 11:20:34,738 - socket_app_py - INFO - Stopping the server...
+2016-03-31 11:20:35,124 - socket_app_py - INFO - Server stopped successfully.
+
+2016-03-31 11:20:35,125 - socket_app_py - INFO - Closing the server...
+2016-03-31 11:20:35,125 - socket_app_py - INFO - Server closed successfully.
+
+
+2016-03-31 11:20:47,702 - socket_app_py - INFO - Creating the server socket...
+2016-03-31 11:20:47,704 - socket_app_py - INFO - Starting server...
+2016-03-31 11:20:47,705 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-31 11:21:05,836 - socket_app_py - INFO - Retrieving data...
+2016-03-31 11:21:05,837 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"password\\\": \\\"SSII-PSI3\\\", \\\"message\\\": \\\"slkdfjlsdkfds\\\", \\\"username\\\": \\\"PSI3-SSII\\\"}\"", "hmac": "f2307fe6d2cc75cbbe0f55aa024e1530348e225a9343ef4bbab9e283e0f0466b", "nonce": "c6f7340b4b7ce110363d1b8e6f78cd606e0b7f1c052a8c0dbd1f01054fd46f08"}
+2016-03-31 11:21:05,838 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 11:21:05,839 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 11:21:05,840 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 11:21:05,840 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 11:21:05,841 - socket_app_py - INFO - The NONCE c6f7340b4b7ce110363d1b8e6f78cd606e0b7f1c052a8c0dbd1f01054fd46f08 isn't in the database
+2016-03-31 11:21:05,842 - socket_app_py - INFO - Checking the integrity of the message '{"password": "SSII-PSI3", "message": "slkdfjlsdkfds", "username": "PSI3-SSII"}'
+2016-03-31 11:21:05,842 - socket_app_py - INFO - The integrity of the message '{"password": "SSII-PSI3", "message": "slkdfjlsdkfds", "username": "PSI3-SSII"}' is correct
+2016-03-31 11:21:05,843 - socket_app_py - INFO - Checking username and password...
+2016-03-31 11:21:05,843 - socket_app_py - INFO - The username and password are correct.
+2016-03-31 11:21:05,844 - socket_app_py - INFO - Inserting NONCE in the Data Base...
+2016-03-31 11:21:05,845 - socket_app_py - DEBUG - INSERT statement: INSERT INTO transmission (nonce, insert_date, hex_hmac, integrity, message) VALUES ('c6f7340b4b7ce110363d1b8e6f78cd606e0b7f1c052a8c0dbd1f01054fd46f08',?,'f2307fe6d2cc75cbbe0f55aa024e1530348e225a9343ef4bbab9e283e0f0466b',?);
+2016-03-31 11:21:05,845 - socket_app_py - INFO - Error while trying to insert the NONCE in the Data Base
+
+
+
+2016-03-31 11:21:05,847 - socket_app_py - DEBUG - Traceback (most recent call last):
+  File "C:/Users/Dani/PycharmProjects/SSII_Proyecto_3\crypt_utils.py", line 134, in insert_hmac
+    cursor = conn.execute(insert, (now, integrity,))
+sqlite3.OperationalError: 4 values for 5 columns
+
+
+
+2016-03-31 11:21:05,847 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 11:21:05,848 - socket_app_py - INFO - Data sent.
+2016-03-31 11:22:46,898 - socket_app_py - INFO - Creating the server socket...
+2016-03-31 11:22:46,900 - socket_app_py - INFO - Starting server...
+2016-03-31 11:22:46,901 - socket_app_py - INFO - Server socket started successfully. The server will run forever
+
+2016-03-31 11:22:52,988 - socket_app_py - INFO - Retrieving data...
+2016-03-31 11:22:52,989 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"password\\\": \\\"asdfasdfasdf\\\", \\\"message\\\": \\\"asdfasdfadsfasdf\\\", \\\"username\\\": \\\"adfasdfasdf\\\"}\"", "hmac": "b0007d94459bda7831d0eddde4eaa119a2af5488832cad5e2f1774ef3acd7051", "nonce": "6a5db7a0e029a0ec59341d2703e70e439047e3c729a08087687dee6877ea7090"}
+2016-03-31 11:22:52,990 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 11:22:52,991 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 11:22:52,992 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 11:22:52,992 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 11:22:52,994 - socket_app_py - INFO - The NONCE 6a5db7a0e029a0ec59341d2703e70e439047e3c729a08087687dee6877ea7090 isn't in the database
+2016-03-31 11:22:52,994 - socket_app_py - INFO - Checking the integrity of the message '{"password": "asdfasdfasdf", "message": "asdfasdfadsfasdf", "username": "adfasdfasdf"}'
+2016-03-31 11:22:52,995 - socket_app_py - INFO - The integrity of the message '{"password": "asdfasdfasdf", "message": "asdfasdfadsfasdf", "username": "adfasdfasdf"}' is correct
+2016-03-31 11:22:52,995 - socket_app_py - INFO - Checking username and password...
+2016-03-31 11:22:52,996 - socket_app_py - WARNING - The username and password are incorrect!.
+2016-03-31 11:22:52,996 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 11:22:52,997 - socket_app_py - INFO - Data sent.
+2016-03-31 11:23:08,678 - socket_app_py - INFO - Retrieving data...
+2016-03-31 11:23:08,679 - socket_app_py - INFO - 127.0.0.1 wrote: {"message": "\"{\\\"password\\\": \\\"SSII-PSI3\\\", \\\"message\\\": \\\"prueba\\\", \\\"username\\\": \\\"PSI3-SSII\\\"}\"", "hmac": "0c6b94c95040011403e80f0ab86cf47f71b510780e89aab91e04fc8a1febcb6a", "nonce": "c4dcaf5f085792f242b13b4e6e8daa5684efbd01cd1988d4ccce2470227ec1b6"}
+2016-03-31 11:23:08,680 - socket_app_py - DEBUG - Check table statement: SELECT * FROM sqlite_master WHERE name ='transmission' and type='table';
+2016-03-31 11:23:08,681 - socket_app_py - INFO - Checking if the table transmission exists...
+2016-03-31 11:23:08,682 - socket_app_py - INFO - The table transmission already exists
+
+2016-03-31 11:23:08,682 - socket_app_py - INFO - Checking the NONCE...
+2016-03-31 11:23:08,683 - socket_app_py - INFO - The NONCE c4dcaf5f085792f242b13b4e6e8daa5684efbd01cd1988d4ccce2470227ec1b6 isn't in the database
+2016-03-31 11:23:08,684 - socket_app_py - INFO - Checking the integrity of the message '{"password": "SSII-PSI3", "message": "prueba", "username": "PSI3-SSII"}'
+2016-03-31 11:23:08,685 - socket_app_py - INFO - The integrity of the message '{"password": "SSII-PSI3", "message": "prueba", "username": "PSI3-SSII"}' is correct
+2016-03-31 11:23:08,685 - socket_app_py - INFO - Checking username and password...
+2016-03-31 11:23:08,686 - socket_app_py - INFO - The username and password are correct.
+2016-03-31 11:23:08,687 - socket_app_py - INFO - Inserting NONCE in the Data Base...
+2016-03-31 11:23:08,687 - socket_app_py - DEBUG - INSERT statement: INSERT INTO transmission (nonce, insert_date, hex_hmac, integrity, message) VALUES ('c4dcaf5f085792f242b13b4e6e8daa5684efbd01cd1988d4ccce2470227ec1b6',?,'0c6b94c95040011403e80f0ab86cf47f71b510780e89aab91e04fc8a1febcb6a',?,'prueba');
+2016-03-31 11:23:08,836 - socket_app_py - INFO - The NONCE has been saved correctly in the Data Base
+
+2016-03-31 11:23:08,838 - socket_app_py - INFO - Sending data back to 127.0.0.1 (client socket).
+2016-03-31 11:23:08,840 - socket_app_py - INFO - Data sent.

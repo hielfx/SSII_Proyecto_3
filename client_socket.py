@@ -50,9 +50,10 @@ class SSLClientSocket:
     def send_data(self, message):
         key = "P$1_m3$$4G3_k3Y"
         # key = os.urandom(8)
-        hmac = c_utl.hash_message(str.encode(message), key=bytes(str.encode(key)), mode=sha256)[1]  # We get the hashed message
+        message_str = json.dumps(message)
+        hmac = c_utl.hash_message(str.encode(message_str), key=bytes(str.encode(key)), mode=sha256)[1]  # We get the hashed message
         nonce = c_utl.generate_nonce()
-        dict = {"message": message,
+        dict = {"message": message_str,
                 "nonce": nonce,
                 "hmac": hmac}
 

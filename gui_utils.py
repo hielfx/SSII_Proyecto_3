@@ -108,7 +108,7 @@ def generate_client_interface():
     label = tk.Label(status_frame, text="Client status:")
     label.pack(side=tk.LEFT, padx=1, pady=1)
     status = tk.Label(status_frame, text="not connected", fg="red")
-    status.pack(side=tk.LEFT, padx=1,pady=1)
+    status.pack(side=tk.LEFT, padx=1, pady=1)
     address = tk.Label(status_frame, text="Address: {0}:{1}".format(socket.gethostbyname(socket.gethostname()), "7070"))
     address.pack(side=tk.LEFT, padx=1, pady=1)
 
@@ -133,10 +133,11 @@ def generate_client_interface():
             message = message_entry.get()
             data_to_send = {"username": username,
                             "password": password,
-                            "message":message}
+                            "message": message}
 
             try:
-                _dict = client.send_data(json.dumps(data_to_send))
+                send_dump = json.dumps(data_to_send)
+                _dict = client.send_data(send_dump)
                 generate_server_response(_dict)  # We show the server response in a window
             except socket.timeout:
                 generate_msgbox("Timeout", "Exceeded the timeout for the connection (timeout: 5 seconds).", "warning")
@@ -152,7 +153,6 @@ def generate_client_interface():
             generate_msgbox("Timeout", "Exceeded the timeout for the connection when waiting for data (timeout: 5 seconds).", "warning")
 
         # We close the socket after the connection
-        print("test")
         globals()['client'].close_socket()
         # We put the status 'not connected' again
         root.title("Client socket - Not connected")
@@ -165,7 +165,7 @@ def generate_client_interface():
         # We focus again the username entry
         username_entry.focus()
 
-    start_btn = tk.Button(button_frame, text="Connect client", command=start_client_callback)
+    start_btn = tk.Button(button_frame, text="Connect and send message", command=start_client_callback)
     start_btn.pack(side=tk.LEFT, padx=1, pady=1)
 
     # def stop_client_callback():
@@ -245,6 +245,7 @@ def generate_server_response(dict):
     hmac = dict['hmac']  # The message hmac returned by the server
     replay = dict['replay']  # Sends if it's been a reply attack
     integrity = dict['integrity']  # Sends if the integrity is correct
+    user_password = dict['user_password']  # The username and password verification
 
     root = tk.Tk()
     root.title("Server response")
@@ -262,10 +263,14 @@ def generate_server_response(dict):
         status['text'] = "The NONCE was sent already (maybe replay attack)."
         status['fg'] = "orange"
     elif not integrity:
-        status['text'] = "The message was modified. The integrity failed."
+        status['text'] = "Your data was modified. The integrity failed.\n" \
+                         "Your message has been stored for security purposes."
+        status['fg'] = "red"
+    elif not user_password:
+        status['text'] = "The username and password are not correct. The message wasn't store."
         status['fg'] = "red"
     else:
-        status['text'] = "The message was received correctly."
+        status['text'] = "The message was received and stored correctly."
         status['fg'] = "green"
     status.grid(row=0, column=1)
 
@@ -278,7 +283,7 @@ def generate_server_response(dict):
     _message = tk.Label(content, text="'{0}'".format(message))
     _message.grid(row=0, column=1, padx=2, pady=2, sticky=tk.W)
 
-    hmac_label = tk.Label(content, text="HMAC received by the server:")
+    hmac_label = tk.Label(content, text="HMAC received by the server(including username, password and message):")
     hmac_label.grid(row=1, column=0, padx=2, pady=2, sticky=tk.E)
     _hmac = tk.Label(content, text="{0}".format(hmac))
     _hmac.grid(row=1, column=1, padx=2, pady=2, sticky=tk.W)

@@ -11,6 +11,7 @@ import sqlite3
 import datetime
 import socket
 import hashlib
+import json
 
 app_name = "socket_app_py"
 
@@ -101,7 +102,7 @@ def check_table():
             # We create the create_table script
             logger.get_logger().info("The table {0} doesn't exists. Creating table...".format(table_name))
 
-            create_table = "CREATE TABLE {0} (id INTEGER PRIMARY KEY AUTOINCREMENT, nonce TEXT UNIQUE, insert_date DATE, hex_hmac TEXT, integrity NUMERIC);".format(
+            create_table = "CREATE TABLE {0} (id INTEGER PRIMARY KEY AUTOINCREMENT, nonce TEXT UNIQUE, insert_date DATE, hex_hmac TEXT, message TEXT, integrity NUMERIC);".format(
                 table_name)
             conn.execute(create_table)
 
@@ -118,11 +119,11 @@ def check_table():
     return cursor
 
 
-def insert_hmac(nonce, hmac, integrity=1):
+def insert_hmac(nonce, hmac, message, integrity=1):
     table_name = "transmission"
     conn=sqlite3.connect(str(app_name)+".db")
     logger.get_logger().info("Inserting NONCE in the Data Base...")
-    insert = "INSERT INTO {0} (nonce, insert_date, hex_hmac, integrity) VALUES ('{1}',?,'{2}',?);".format(table_name, nonce, hmac)
+    insert = "INSERT INTO {0} (nonce, insert_date, hex_hmac, integrity, message) VALUES ('{1}',?,'{2}',?,'{3}');".format(table_name, nonce, hmac, message)
     # print(insert)
     logger.get_logger().debug("INSERT statement: " + insert)
     # print(insert,(_key,))
@@ -144,7 +145,7 @@ def check_integrity(hmac, message):
     key = "P$1_m3$$4G3_k3Y"
     logger.get_logger().info("Checking the integrity of the message '{0}'".format(message))
     # message_hmac = hash_message(message=message, key=bytes(str.encode(key)))[1]
-    message_hmac = hash_message(str.encode(message), key=bytes(str.encode(key)), mode=sha256)[1]
+    message_hmac = hash_message(str.encode(json.dumps(message)), key=bytes(str.encode(key)), mode=sha256)[1]
     if hmac == message_hmac:
         logger.get_logger().info("The integrity of the message '{0}' is correct".format(message))
         globals()['stable_integrity_messages'] += 1

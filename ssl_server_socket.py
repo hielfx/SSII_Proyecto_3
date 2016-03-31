@@ -40,6 +40,11 @@ class SSLTCPServerSocket(ThreadingMixIn, SSLTCPServerSocket):
 
 class MyTCPHandler(StreamRequestHandler):
     def handle(self):
+
+        def check_username_and_password(username,password):
+            logger.get_logger().info("Checking username and password...")
+            return username == "PSI3-SSII" and password == "SSII-PSI3"
+
         # self.request is the TCP socket connected to the client
         logger.get_logger().info("Retrieving data...")
         self.data = self.request.recv(1024).strip()
@@ -50,7 +55,11 @@ class MyTCPHandler(StreamRequestHandler):
             dict = json.loads(data)  # We create a dictionary from the json
             # print(dict)
 
-            message = dict['message']  # The client message
+            message = json.loads(dict['message'])  # The client message (username, password and the message itself)
+            message_username = json.loads(message)['username']
+            message_password = json.loads(message)['password']
+            message_message = json.loads(message)['message']
+
             nonce = dict['nonce']  # The client nonce
             hmac = dict['hmac']  # The message hmac sent by the client
 
@@ -60,16 +69,30 @@ class MyTCPHandler(StreamRequestHandler):
                 # If the NONCE is not in the db, we check the integrity of the message and store it in the database
                 integrity = crypt_utils.check_integrity(hmac, message)
                 if integrity:
-                    crypt_utils.insert_hmac(nonce, hmac)  # The integrity is correct
+                # If the integrity is correct, we check the user and password.
+                # We do it this way because an attacker could have modified the username or password
+                    user_password = check_username_and_password(message_username, message_password)
+                    if user_password:
+                        logger.get_logger().info("The username and password are correct.")
+                        # The integrity and the username-password are correct. We can store the message
+                        # Otherwise we don't store the message
+                        crypt_utils.insert_hmac(nonce, hmac, message_message)
+                    else:
+                        logger.get_logger().warn("The username and password are incorrect!.")
+
+
                 else:
-                    crypt_utils.insert_hmac(nonce, hmac, 0)  # The integrity fails
+                    # We store the message if the integrity fails
+                    # so we can check what information may have been compromised and consider the risks
+                    crypt_utils.insert_hmac(nonce, hmac, message_message, 0)  # The integrity fails
+                    user_password = "Not checked"
             else:
                 integrity = "Not checked"
 
             dict = {'replay': replay,
                     'integrity': integrity,
-                    # "edited": edited,
-                    "message": message,
+                    'user_password': user_password,
+                    "message": message_message,
                     "hmac": hmac,
                     "nonce": nonce}
 
