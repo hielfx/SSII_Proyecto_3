@@ -112,7 +112,33 @@ def generate_client_interface():
     address = tk.Label(status_frame, text="Address: {0}:{1}".format(socket.gethostbyname(socket.gethostname()), "7070"))
     address.pack(side=tk.LEFT, padx=1, pady=1)
 
-    # Buttons frame
+    # Data frame
+    data_frame = tk.Frame(root)
+    data_frame.pack()
+
+    # Username
+    username_label = tk.Label(data_frame, text="Username")
+    username_label.grid(row=0, column=0, padx=2, pady=2)
+    username_entry = tk.Entry(data_frame)
+    username_entry.grid(row=1, column=0, padx=2, pady=2)
+    username_entry.focus()
+
+    # Password
+    password_label = tk.Label(data_frame, text="Password")
+    password_label.grid(row=0, column=1, padx=2, pady=2)
+    password_entry = tk.Entry(data_frame, show="*")
+    password_entry.grid(row=1, column=1, padx=2, pady=2)
+
+     # Message frame
+    message_frame = tk.Frame(root)
+    message_frame.pack(pady=(0, 2))
+    # Message
+    message_label = tk.Label(message_frame, text="Message")
+    message_label.pack(padx=2, pady=2)
+    message_entry = tk.Text(message_frame, height="5", width="50")
+    message_entry.pack(padx=2, pady=2)
+
+     # Buttons frame
     button_frame = tk.Frame(root)
     button_frame.pack(pady=(0, 2))
 
@@ -130,7 +156,8 @@ def generate_client_interface():
 
             username = username_entry.get()
             password = password_entry.get()
-            message = message_entry.get()
+            message = message_entry.get(1.0, tk.END).lstrip().rstrip()
+            # print(message)
             data_to_send = {"username": username,
                             "password": password,
                             "message": message}
@@ -145,7 +172,7 @@ def generate_client_interface():
             # send_button['state'] = tk.NORMAL
 
         except Exception:
-            traceback.print_exc()
+            # traceback.print_exc()
             generate_msgbox("Error", "You can not establish a connection because the target machine expressly "
                                         "rejected that connection. Check if the server socket is running.\n"
                                         "The connection address was '{0}:{1}'".format(host, port), "error")
@@ -161,73 +188,12 @@ def generate_client_interface():
         # We clear the entry fields
         username_entry.delete(0, tk.END)
         password_entry.delete(0, tk.END)
-        message_entry.delete(0, tk.END)
+        message_entry.delete(1.0, tk.END)
         # We focus again the username entry
         username_entry.focus()
 
     start_btn = tk.Button(button_frame, text="Connect and send message", command=start_client_callback)
     start_btn.pack(side=tk.LEFT, padx=1, pady=1)
-
-    # def stop_client_callback():
-    #     client.close_socket()
-    #
-    #     root.title("Client socket - Not connected")
-    #     status['text'] = "stopped"
-    #     status['fg'] = "red"
-    #     stop_btn['state'] = tk.DISABLED
-    #     start_btn['state'] = tk.NORMAL
-    #
-    #     username_entry['state'] = tk.DISABLED
-    #     username_label['state'] = tk.DISABLED
-    #     password_entry['state'] = tk.DISABLED
-    #     password_label['state'] = tk.DISABLED
-    #     message_entry['state'] = tk.DISABLED
-    #     message_label['state'] = tk.DISABLED
-    #
-    #     # send_button['state'] = tk.DISABLED
-    #
-    #     msgbox.showinfo("Disconnected", "The client was disconnected from the server.")
-    #
-    # stop_btn = tk.Button(button_frame, text="Disconnect client", command=stop_client_callback, state=tk.DISABLED)
-    # stop_btn.pack(side=tk.LEFT, padx=1, pady=1)
-
-    # Data frame
-    data_frame = tk.Frame(root)
-    data_frame.pack()
-
-    # Username
-    username_label = tk.Label(data_frame, text="Username")
-    username_label.grid(row=0, column=0, padx=2, pady=2)
-    username_entry = tk.Entry(data_frame)
-    username_entry.grid(row=1, column=0, padx=2, pady=2)
-    username_entry.focus()
-
-    # Password
-    password_label = tk.Label(data_frame, text="Password")
-    password_label.grid(row=0, column=2, padx=2, pady=2)
-    password_entry = tk.Entry(data_frame, show="*")
-    password_entry.grid(row=1, column=2, padx=2, pady=2)
-
-    # Message
-    message_label = tk.Label(data_frame, text="Message")
-    message_label.grid(row=0, column=4, padx=2, pady=2)
-    message_entry = tk.Entry(data_frame)
-    message_entry.grid(row=1, column=4, padx=2, pady=2)
-
-    # def send_data_callback():
-    #     origin = username_entry.get()
-    #     destiny = password_entry.get()
-    #     amount = message_entry.get()
-    #     data_to_send = origin+", "+destiny+", "+amount
-    #
-    #     try:
-    #         _dict = client.send_data(data_to_send)
-    #         generate_server_response(_dict)  # We show the server response in a window
-    #     except socket.timeout:
-    #         generate_msgbox("Timeout", "Exceeded the timeout for the connection (timeout: 5 seconds).", "warning")
-    #
-    # send_button = tk.Button(root, text="Send data", command=send_data_callback, state=tk.DISABLED)
-    # send_button.pack(pady=(0, 3))
 
     def on_closing():
         if client is not None:
