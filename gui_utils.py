@@ -182,7 +182,7 @@ def generate_client_interface():
             generate_msgbox("Timeout", "Exceeded the timeout for the connection when waiting for data (timeout: 5 seconds).", "warning")
 
         # We close the socket after the connection
-        # globals()['client'].close_socket()
+        globals()['client'].close_socket()
         # We put the status 'not connected' again
         root.title("Client socket - Not connected")
         status['text'] = "stopped"
