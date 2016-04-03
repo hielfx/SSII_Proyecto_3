@@ -23,6 +23,7 @@ class SSLServerSocket():
                  certfile,  # Certificate path
                  keyfile,  # Key path
                  ssl_version=ssl.PROTOCOL_SSLv23,  #Comunication protocol
+                 ciphers="DEFAULT",
                  bind_and_activate=True):
 
         try:
@@ -33,7 +34,8 @@ class SSLServerSocket():
             self.ssl_version = ssl_version
 
             #TODO: CHECK THIS METHOD AND THE CLIENT
-            s = SSLTCPServerSocket((host, port), MyTCPHandler, certfile, keyfile)
+            s = SSLTCPServerSocket((host, port), MyTCPHandler, certfile, keyfile
+                                   , ciphers=ciphers, bind_and_activate=bind_and_activate)
             self.socket = s
             self.host = host
             self.port = port

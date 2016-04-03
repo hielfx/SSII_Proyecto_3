@@ -66,32 +66,7 @@ class SSLClientSocket:
         _dict = json.loads(received)
 
         return _dict
-        #     # We show the server response in a window
-        #     g_utl.generate_server_response(_dict)
-        #
-        #     # print(received)
-        # except socket.timeout:
-        #     g_utl.generate_msgbox("Timeout", "Exceeded the timeout for the connection (timeout: 5 seconds).", "warning")
 
 if __name__ == "__main__":
     # g_utl.generate_client_interface()
     pass
-    # client = ClientSocket()
-    # try:
-    #     host = host=socket.gethostbyname(socket.gethostname())
-    #     port = 7070
-    #     client.connect(host, port)
-    # except Exception:
-    #     g_utl.generate_msgbox("Error", "You can not establish a connection because the target machine expressly "
-    #                                 "rejected that connection. Check if the server socket is running.\n"
-    #                                 "The connection address was '{0}:{1}'".format(host, port), "error")
-    # except socket.timeout:
-    #     g_utl.generate_msgbox("Timeout", "Exceeded the timeout for the connection when waiting for data (timeout: 5 seconds).", "warning")
-    # try:
-    #     _dict = client.send_data("mensaje de prueba")
-    #     g_utl.generate_server_response(_dict)  # We show the server response in a window
-    # except socket.timeout:
-    #     g_utl.generate_msgbox("Timeout", "Exceeded the timeout for the connection (timeout: 5 seconds).", "warning")
-    # finally:
-    #     # client.stop_socket()
-    #     client.close_socket()

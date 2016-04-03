@@ -52,8 +52,10 @@ def generate_server_interface():
     button_frame.pack()
 
     def start_server_callback():
-        globals()['server'] = SSLServerSocket('127.0.0.1', 7070,"sslserver.crt.pem",
-                                              "sslserver.key.pem",ssl_version=ssl.PROTOCOL_TLSv1_2)
+        globals()['server'] = SSLServerSocket(host='127.0.0.1', port=7070,
+                                              certfile="sslserver.crt.pem",
+                                              keyfile="sslserver.key.pem",
+                                              ssl_version=ssl.PROTOCOL_TLSv1_2)
 
         # We call the server asynchronously to not freeze the application. We create a thread
         thr = threading.Thread(target=globals()['server'].run_server, args=(), kwargs={})
@@ -180,7 +182,7 @@ def generate_client_interface():
             generate_msgbox("Timeout", "Exceeded the timeout for the connection when waiting for data (timeout: 5 seconds).", "warning")
 
         # We close the socket after the connection
-        globals()['client'].close_socket()
+        # globals()['client'].close_socket()
         # We put the status 'not connected' again
         root.title("Client socket - Not connected")
         status['text'] = "stopped"
